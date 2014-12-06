@@ -23,7 +23,8 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 * Linux 64Bit
 * Apple OSX 10.8-10.10
 
-Due to time constraints, 32Bit-Systems are not supported. OCRaptor comes with a build-in Java 8 Runtime Environment.
+Due to time constraints, 32Bit-Systems are not supported.<br/>
+OCRaptor comes with a build-in Java 8 Runtime Environment.
 
 # Download and Installation
 **BE AWARE THAT OCRAPTOR IS A WORK IN PROGRESS AND THEREFORE CONTAINS A VARIETY OF BUGS AND ROUGH EDGES. I STRONGLY ADVISE YOU NOT TO USE
