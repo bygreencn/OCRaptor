@@ -62,7 +62,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 # Starting
 * **Microsoft Windows 7/8 64Bit**<br/>
-  ![](img/Desktop01-en.png)
+  ![](img/Desktop-Icon-01-en.png)
 * Linux 64Bit (Not online yet)
 * Apple OSX 10.8-10.10 (Not online yet)
 
