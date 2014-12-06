@@ -68,7 +68,8 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   chmod u+x OCRaptor
   ``
   <br/>
-  > test
+>test
+
 * Apple OSX 10.8-10.10
 
 If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
