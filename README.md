@@ -64,7 +64,9 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * **Microsoft Windows 7/8 64Bit**<br/>
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
-      chmod u+x OCRaptor
+  ```bash
+  chmod u+x OCRaptor
+  ```
 * Apple OSX 10.8-10.10
 
 If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
