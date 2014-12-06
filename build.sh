@@ -32,9 +32,11 @@ fi
 # ---------------------------------------------------- #
 
 BASEDIR=$(pwd)
+
 TEMP_FOLDER="$BASEDIR""/res/misc/online-resources"
 USER_FOLDER="$BASEDIR""/res/cnfg/usr"
 LOG_FOLDER="$BASEDIR""/res/cnfg/log"
+TESS_FOLDER="$BASEDIR""/res/tess/tessdata"
 
 # ---------------------------------------------------- #
 # -- TODO:
@@ -50,6 +52,10 @@ fi
 
 if [ ! -d "$LOG_FOLDER" ]; then
   mkdir -p "$LOG_FOLDER"
+fi
+
+if [ ! -d "$TESS_FOLDER" ]; then
+  mkdir -p "$TESS_FOLDER"
 fi
 
 # ---------------------------------------------------- #
