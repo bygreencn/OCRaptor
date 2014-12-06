@@ -78,14 +78,26 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ``
 
 
-* Apple OSX 10.8-10.10
+* **Apple OSX 10.8-10.10**<br/>
+
+  ``
+  cd OCRaptor-0.7.1-Osx
+  ``
+
+  ``
+  chmod u+x OCRaptor*
+  ``
+
+  ``
+  ./OCRaptor
+  ``
 
 If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
 The 7zip-archive contains photos and scanned images of documents in English and German.
 
 <a name="SupportedFiletypes"></a>
 # Supported filetypes
-* Image files:
+* **Image files:**
     * JPEG, PNG, TIFF, BMP, GIF
 * Microsoft Office:
     * Word, Excel, Powerpoint,
