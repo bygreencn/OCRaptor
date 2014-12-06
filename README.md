@@ -65,10 +65,14 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
   ``
+  OCRaptor
+  OCRaptorCL
+  OCRaptorPL
+  ``
+
+  ``
   chmod u+x OCRaptor
   ``
-  <br/>
->test
 
 * Apple OSX 10.8-10.10
 
