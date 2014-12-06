@@ -64,11 +64,11 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * **Microsoft Windows 7/8 64Bit**<br/>
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
-  ``
-  OCRaptor\n
-  OCRaptorCL\n
-  OCRaptorPL\n
-  ``
+  `
+  OCRaptor
+  OCRaptorCL
+  OCRaptorPL
+  `
 
   ``
   chmod u+x OCRaptor
