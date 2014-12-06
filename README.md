@@ -97,24 +97,24 @@ The 7zip-archive contains photos and scanned images of documents in English and 
 
 <a name="SupportedFiletypes"></a>
 # Supported filetypes
-* **Image files:**
+* **Image files**
     * JPEG, PNG, TIFF, BMP, GIF
-* Microsoft Office:
+* **Microsoft Office**
     * Word, Excel, Powerpoint,
         [XPS](http://windows.microsoft.com/en-us/windows7/products/features/xps),
         [RTF](http://en.wikipedia.org/wiki/Rich_Text_Format),
         [CHM](http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help)
-* LibreOffice / OpenOffice:
+* **LibreOffice / OpenOffice**
     * Writer, Impress, Calc
-* Apple iWork'09:
+* **Apple iWork'09**
     * Pages, Numbers, Key
 * Adobe PDF
 * [Postscript](http://en.wikipedia.org/wiki/PostScript)
 * XML, HTML
 * [EPUB](http://en.wikipedia.org/wiki/EPUB)
 * [Xournal](http://en.wikipedia.org/wiki/Xournal)
-* Plain textfiles
-* Planned filetypes:
+* Plain textfiles<br/>
+* **Planned filetypes**
     * Apple iWork'13
     * Archives-files (*.zip, *.rar...)
     * [DjVu](http://en.wikipedia.org/wiki/DjVu)
