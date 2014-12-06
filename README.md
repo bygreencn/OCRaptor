@@ -61,7 +61,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * ~~**Cross-platform version**~~ (Not ready yet)
 
 # Starting
-* **Microsoft Windows 7/8 64Bit**
+* **Microsoft Windows 7/8 64Bit**<br/>
   ![](img/Desktop01-en.png)
 * Linux 64Bit (Not online yet)
 * Apple OSX 10.8-10.10 (Not online yet)
