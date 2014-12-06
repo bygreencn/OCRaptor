@@ -33,6 +33,24 @@ fi
 
 BASEDIR=$(pwd)
 TEMP_FOLDER="$BASEDIR""/res/misc/online-resources"
+USER_FOLDER="$BASEDIR""/res/cnfg/usr"
+LOG_FOLDER="$BASEDIR""/res/cnfg/log"
+
+# ---------------------------------------------------- #
+# -- TODO:
+# ---------------------------------------------------- #
+
+if [ ! -d "$TEMP_FOLDER" ]; then
+  mkdir -p "$TEMP_FOLDER"
+fi
+
+if [ ! -d "$USER_FOLDER" ]; then
+  mkdir -p "$USER_FOLDER"
+fi
+
+if [ ! -d "$LOG_FOLDER" ]; then
+  mkdir -p "$LOG_FOLDER"
+fi
 
 # ---------------------------------------------------- #
 # -- TODO:
