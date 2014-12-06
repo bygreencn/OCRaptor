@@ -113,7 +113,7 @@ The 7zip-archive contains photos and scanned images of documents in English and 
 * XML, HTML
 * [EPUB](http://en.wikipedia.org/wiki/EPUB)
 * [Xournal](http://en.wikipedia.org/wiki/Xournal)
-* Plain textfiles<br/>
+* Plain textfiles<br/><br/>
 * **Planned filetypes**
     * Apple iWork'13
     * Archives-files (*.zip, *.rar...)
