@@ -37,9 +37,17 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
   Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e<br/>
   Date: 2014-12-06 17:35<br/>
-  Size: 129 MB
+  Size: 129 MB<br/>
+  Version: 0.7.1 (06.12.2014)
 * **Linux 64Bit**<br/>
-  The lin
+  [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
+  or [mirror 2](http://workupload.com/file/FUfv0iLv)
+
+  Md5sum: ff42549941a59101c7b4457e30656210<br/>
+  Date: 2014-12-07 00:12<br/>
+  Size: 99.1 MB<br/>
+  Version: 0.7.1 (06.12.2014)
+
 * ~~**Apple OSX 10.8-10.10**~~ (Not online yet)
 * ~~**Cross-platform version**~~ (Not online yet)
 
