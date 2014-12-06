@@ -65,9 +65,9 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
   ``
-  OCRaptor
-  OCRaptorCL
-  OCRaptorPL
+  OCRaptor\n
+  OCRaptorCL\n
+  OCRaptorPL\n
   ``
 
   ``
