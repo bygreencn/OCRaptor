@@ -45,7 +45,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
   Md5sum: ff42549941a59101c7b4457e30656210<br/>
   Date: 2014-12-07 00:12<br/>
-  Size: 99.1 MB<br/>
+  Size: 107.21<br/>
   Version: 0.7.1 (06.12.2014)
 
 * ~~**Apple OSX 10.8-10.10**~~ (Not online yet)
