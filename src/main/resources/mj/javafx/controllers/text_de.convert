@@ -1,0 +1,2 @@
+mv text_de.properties "text_de_"`date +"%Y_%m_%d-%H_%M"`.properties
+native2ascii text_tmp.properties text_de.properties

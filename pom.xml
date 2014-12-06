@@ -1,0 +1,755 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- ************************************************* -->
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<appName>ocraptor</appName>
+		<mainClassName>mj.Main</mainClassName>
+		<initials>mj</initials>
+		<target>target</target>
+		<buildDir>bin</buildDir>
+		<buildDirWin>bin-win64</buildDirWin>
+		<buildDirOsx>bin-osx64</buildDirOsx>
+		<buildDirLin>bin-lin64</buildDirLin>
+		<filesDir>res</filesDir>
+		<libDir>lib</libDir>
+		<miscDir>misc</miscDir>
+		<onlineRes>online-resources</onlineRes>
+		<tessDir>tess</tessDir>
+		<binsDir>bins</binsDir>
+		<configDir>cnfg</configDir>
+		<userDir>usr</userDir>
+		<logDir>log</logDir>
+		<binName>OCRaptor</binName>
+		<binNameCL>OCRaptorCL</binNameCL>
+		<binNamePL>OCRaptorPL</binNamePL>
+	</properties>
+	<!-- ************************************************* -->
+	<groupId>kolbasa.ocraptor</groupId>
+	<artifactId>ocraptor</artifactId>
+	<version>0.7.1</version>
+	<description>TODO:</description>
+	<packaging>jar</packaging>
+	<!-- ************************************************* -->
+	<developers>
+		<developer>
+			<id>${initials}</id>
+			<name>Michael Jedich</name>
+			<email>m.jedich@mail.de</email>
+		</developer>
+	</developers>
+	<!-- ************************************************* -->
+	<!-- LICENSE -->
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+	<!-- SOURCE CONTROL -->
+	<!-- TODO: -->
+	<!-- ISSUE MANAGEMENT -->
+	<!-- TODO: -->
+	<!-- ************************************************* -->
+	<repositories>
+		<!-- ************************************************* -->
+		<!-- https://github.com/stain/jai-imageio-core -->
+		<repository>
+			<releases />
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>mygrid-repository</id>
+			<name>myGrid Repository</name>
+			<url>http://www.mygrid.org.uk/maven/repository</url>
+		</repository>
+		<!-- ************************************************* -->
+		<!-- dnl.utils / table viewer -->
+		<repository>
+			<id>d-maven</id>
+			<url>http://d-maven.googlecode.com/svn/trunk/repo</url>
+		</repository>
+		<!-- LICENSE: GNU Lesser General Public License -->
+		<repository>
+			<id>org.ghost4j.repository.snapshots</id>
+			<name>Ghost4J snapshots</name>
+			<url>http://repo.ghost4j.org/maven2/snapshots</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>jbig2.googlecode</id>
+			<name>JBIG2 ImageIO-Plugin repository at googlecode.com</name>
+			<url>http://jbig2-imageio.googlecode.com/svn/maven-repository</url>
+		</repository>
+	</repositories>
+	<!-- ************************************************* -->
+	<build>
+		<!-- ************************************************* -->
+		<plugins>
+			<!-- INCLUDE JAVADOC JAR -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.1</version>
+			</plugin>
+
+			<!-- INCLUDE SOURCE JAR -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+
+			<!-- JAVA COMPILER -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<showWarnings>false</showWarnings>
+					<showDeprecation>false</showDeprecation>
+				</configuration>
+			</plugin>
+
+			<!-- GENERATE LICENSE HEADERS IN SOURCE FILES -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>1.9.0</version>
+			</plugin>
+
+			<!-- ************************************************* -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<finalName>${appName}</finalName>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>${mainClassName}</mainClass>
+							<classpathPrefix>${libDir}/</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<Application-Name>Test</Application-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- ************************************************* -->
+			<!-- Copy needed jars to target folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>
+								${project.build.directory}/lib/
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>create-empty-directory</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+
+								<!-- clean old binaries directory first -->
+								<delete dir="${buildDir}" failonerror="false" />
+								<mkdir dir="${buildDir}" />
+
+								<!-- copy java libraries from target directory -->
+								<copy todir="${buildDir}/${libDir}">
+									<fileset dir="${target}/${libDir}" includes="**" />
+								</copy>
+
+								<!-- copy native sigar libraries -->
+								<copy todir="${buildDir}/${libDir}">
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/sigar/hyperic-sigar-1.6.5/sigar-bin/lib"
+										includes="**" />
+								</copy>
+
+								<!-- copy tesseract native binaries -->
+								<copy todir="${buildDir}">
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/win-x86-64"
+										includes="**" />
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/lin-x86-64"
+										includes="**" />
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/osx-x86-64"
+										includes="**" />
+								</copy>
+
+								<!-- copy tesseract language packs -->
+								<copy todir="${filesDir}/${tessDir}/tessdata">
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j_lang/tesseract-ocr/tessdata"
+										includes="???.traineddata" />
+								</copy>
+
+								<!-- copy tess4j wrapper -->
+								<copy
+									file="${filesDir}/${miscDir}/${onlineRes}/tess4j-wrapper/bin/tess4j-wrapper.jar"
+									tofile="${filesDir}/${binsDir}/tess4j-wrapper.jar" />
+
+								<!-- copy ghost4j native binaries -->
+								<copy todir="${buildDir}">
+									<fileset
+										dir="${filesDir}/${miscDir}/${onlineRes}/ghost4j-native-libraries/win-x86-64"
+										includes="**" />
+								</copy>
+
+								<!-- copy jre-version-checker -->
+								<copy
+									file="${filesDir}/${miscDir}/${onlineRes}/jre-version-checker/bin/jre-version-checker.jar"
+									tofile="${filesDir}/${binsDir}/jre-version-checker.jar" />
+
+								<!-- copy resources directory -->
+								<copy todir="${buildDir}/${filesDir}">
+									<fileset dir="${filesDir}" includes="**" />
+								</copy>
+
+								<!-- copy main jar-file -->
+								<copy file="${target}/${appName}.jar"
+									tofile="${buildDir}/${filesDir}/${binsDir}/${appName}.jar" />
+								<copy file="LICENSE" tofile="${buildDir}/LICENSE" />
+								<copy file="README.md" tofile="${buildDir}/README.md" />
+
+								<!-- copy linux-osx start scripts -->
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameCL}"
+									tofile="${buildDir}/${binNameCL}" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNamePL}"
+									tofile="${buildDir}/${binNamePL}" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}"
+									tofile="${buildDir}/${binName}" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameCL}.bat"
+									tofile="${buildDir}/${binNameCL}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNamePL}.bat"
+									tofile="${buildDir}/${binNamePL}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}.bat"
+									tofile="${buildDir}/${binName}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}.exe"
+									tofile="${buildDir}/${binName}.exe" />
+
+								<!-- make start script executable -->
+								<chmod dir="${buildDir}" perm="ugo+rx" includes="**/OCRaptor*" />
+
+								<!-- clear unnecessary files -->
+								<delete dir="${buildDir}/${filesDir}/${miscDir}"
+									failonerror="false" />
+
+								<!-- delete sigar libs {{{ -->
+
+								<delete file="${buildDir}/${libDir}/sigar-x86-winnt.dll"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/sigar-x86-winnt.lib"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-ia64-hpux-11.sl"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-pa-hpux-11.sl"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-amd64-freebsd-6.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-amd64-solaris.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-ppc64-aix-5.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-ppc64-linux.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-ppc-aix-5.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-ppc-linux.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-s390x-linux.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-sparc64-solaris.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-sparc-solaris.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-x86-freebsd-5.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-x86-freebsd-6.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-x86-linux.so"
+									failonerror="false" />
+								<delete file="${buildDir}/${libDir}/libsigar-x86-solaris.so"
+									failonerror="false" />
+
+								<!-- }}} -->
+
+								<!-- TODO: -->
+								<delete dir="${target}" failonerror="false" />
+
+								<delete>
+									<!-- clear user configurations -->
+									<fileset dir="${buildDir}/${filesDir}/${configDir}/${userDir}">
+										<include name="*.properties" />
+									</fileset>
+									<!-- clear log files -->
+									<fileset dir="${buildDir}/${filesDir}/${configDir}/${logDir}">
+										<include name="*.log" />
+									</fileset>
+								</delete>
+
+								<!-- Windows build {{{ -->
+
+								<!-- ********************************************************** -->
+								<delete dir="${buildDirWin}" failonerror="false" />
+								<mkdir dir="${buildDirWin}" />
+								<copy todir="${buildDirWin}">
+									<fileset dir="${buildDir}" includes="**" />
+								</copy>
+								<delete file="${buildDirWin}/liblept.dylib" />
+								<delete file="${buildDirWin}/libtesseract.dylib" />
+								<delete file="${buildDirWin}/libtesseract.so" />
+								<delete file="${buildDirWin}/OCRaptor" />
+								<delete file="${buildDirWin}/OCRaptorCL" />
+								<delete file="${buildDirWin}/OCRaptorPL" />
+								<delete
+									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
+								<delete
+									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
+								<delete file="${buildDirWin}/${libDir}/libsigar-amd64-linux.so" />
+								<delete file="${buildDirWin}/${libDir}/libsigar-ia64-linux.so" />
+								<delete
+									file="${buildDirWin}/${libDir}/libsigar-universal-macosx.dylib" />
+								<delete
+									file="${buildDirWin}/${libDir}/libsigar-universal64-macosx.dylib" />
+								<!-- ********************************************************** -->
+
+								<!-- }}} -->
+
+
+								<!-- Linux build {{{ -->
+
+								<!-- ********************************************************** -->
+								<delete dir="${buildDirLin}" failonerror="false" />
+								<mkdir dir="${buildDirLin}" />
+								<copy todir="${buildDirLin}">
+									<fileset dir="${buildDir}" includes="**" />
+								</copy>
+								<delete file="${buildDirLin}/liblept.dylib" />
+								<delete file="${buildDirLin}/libtesseract.dylib" />
+								<delete file="${buildDirLin}/gsdll64.dll" />
+								<delete file="${buildDirLin}/liblept168.dll" />
+								<delete file="${buildDirLin}/libtesseract302.dll" />
+								<delete file="${buildDirLin}/OCRaptor.exe" />
+								<delete file="${buildDirLin}/OCRaptor.bat" />
+								<delete file="${buildDirLin}/OCRaptorCL.bat" />
+								<delete file="${buildDirLin}/OCRaptorPL.bat" />
+								<delete
+									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/win-x86-64" />
+								<delete
+									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
+								<delete file="${buildDirLen}/${libDir}/libsigar-amd64-linux.so" />
+								<delete file="${buildDirLen}/${libDir}/libsigar-ia64-linux.so" />
+								<delete
+									file="${buildDirLin}/${libDir}/libsigar-universal-macosx.dylib" />
+								<delete
+									file="${buildDirLin}/${libDir}/libsigar-universal64-macosx.dylib" />
+								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll" />
+								<chmod dir="${buildDirLin}" perm="ugo+rx" includes="**/OCRaptor*" />
+								<!-- ********************************************************** -->
+
+								<!-- }}} -->
+
+
+								<!-- OSX build {{{ -->
+
+								<!-- ********************************************************** -->
+								<delete dir="${buildDirOsx}" failonerror="false" />
+								<mkdir dir="${buildDirOsx}" />
+								<copy todir="${buildDirOsx}">
+									<fileset dir="${buildDir}" includes="**" />
+								</copy>
+								<delete file="${buildDirOsx}/gsdll64.dll" />
+								<delete file="${buildDirOsx}/liblept168.dll" />
+								<delete file="${buildDirOsx}/libtesseract302.dll" />
+								<delete file="${buildDirOsx}/libtesseract.so" />
+
+								<delete file="${buildDirOsx}/OCRaptor.exe" />
+								<delete file="${buildDirOsx}/OCRaptor.bat" />
+								<delete file="${buildDirOsx}/OCRaptorCL.bat" />
+								<delete file="${buildDirOsx}/OCRaptorPL.bat" />
+								<delete
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
+								<delete
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
+								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll" />
+								<chmod dir="${buildDirOsx}" perm="ugo+rx" includes="**/OCRaptor*" />
+								<!-- ********************************************************** -->
+
+								<!-- }}} -->
+
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!-- ************************************************* -->
+				<!-- JAVACC -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>javacc-maven-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<!-- http://mojo.codehaus.org/javacc-maven-plugin/javacc-mojo.html -->
+						<outputDirectory>src/main/java/mj</outputDirectory>
+						<sourceDirectory>src/main/java/mj/parser</sourceDirectory>
+						<jdkVersion>${jdk.version}</jdkVersion>
+
+						<includes>
+							<include>*.jj</include>
+						</includes>
+						<debugParser>false</debugParser>
+						<lookAhead>1</lookAhead>
+						<ignoreCase>false</ignoreCase>
+						<isStatic>false</isStatic>
+						<buildParser>true</buildParser>
+						<useTokenManager>false</useTokenManager>
+						<buildTokenManager>true</buildTokenManager>
+						<javaUnicodeEscape>true</javaUnicodeEscape>
+						<useCharStream>true</useCharStream>
+						<nodeFactory>true</nodeFactory>
+					</configuration>
+					<executions>
+						<execution>
+							<id>javacc</id>
+							<goals>
+								<goal>javacc</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- ************************************************* -->
+				<!-- Ignore/Execute plugin execution -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<!-- copy-dependency plugin -->
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				<!-- ************************************************* -->
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<!-- http://en.wikipedia.org/wiki/List_of_installation_software#Cross-platform -->
+		<!-- http://installbuilder.bitrock.com/open-source-licenses.html -->
+		<!-- http://izpack.org/downloads/ -->
+		<!-- ************************************************* -->
+		<!-- <dependency> <groupId>javax.media.jai</groupId> <artifactId>com.springsource.javax.media.jai.core</artifactId> 
+			<version>1.1.3</version> </dependency> -->
+		<!-- ************************************************* -->
+		<!-- Tess4j OCR Engine -->
+		<!-- ************************************************* -->
+		<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bcprov-jdk15</artifactId>
+			<version>140</version>
+		</dependency>
+		<dependency>
+			<groupId>com.levigo.jbig2</groupId>
+			<artifactId>levigo-jbig2-imageio</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<!-- http://sourceforge.net/projects/tess4j/ -->
+		<dependency>
+			<groupId>mj.tess4j</groupId>
+			<artifactId>tess4j</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!-- LICENSE: GNU Lesser General Public License -->
+		<!-- Used by XPSParser -->
+		<dependency>
+			<groupId>mj.javaaxp</groupId>
+			<artifactId>javaaxp</artifactId>
+			<version>0.2.0</version>
+		</dependency>
+		<!-- LICENSE: GNU Lesser General Public License -->
+		<!-- Used by XOJParser -->
+		<!-- <dependency> <groupId>mj.gnujpdf</groupId> <artifactId>gnujpdf</artifactId> 
+			<version>0.2.0</version> </dependency> -->
+		<!-- The GNU Affero General Public License, Version 3 -->
+		<dependency>
+			<groupId>fr.inria.powerapi.sensor</groupId>
+			<artifactId>sensor-cpu-api</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<!-- GNU Affero General Public License -->
+		<dependency>
+			<groupId>fr.inria.powerapi.sensor</groupId>
+			<artifactId>sensor-sigar</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<!-- <dependency> <groupId>bouncycastle</groupId> <artifactId>bcprov-jdk16</artifactId> 
+			<version>140</version> </dependency> -->
+		<!-- The MIT License -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>17.0</version>
+		</dependency>
+		<!-- MPL 2.0, and EPL 1.0 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.179</version>
+		</dependency>
+		<!-- dependency of tess4j -->
+		<!-- https://github.com/twall/jna -->
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<!-- dependency of tess4j -->
+		<!-- LICENSE: BSD license -->
+		<dependency>
+			<groupId>net.java.dev.jai-imageio</groupId>
+			<artifactId>jai-imageio-core-standalone</artifactId>
+			<version>1.2-pre-dr-b04-2011-07-04</version>
+		</dependency>
+		<!-- ************************************************* -->
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-highlighter</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-join</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queryparser</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		<!-- The MIT License -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.3</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- LICENSE: GNU Lesser General Public License -->
+		<!-- pretty command line table viewer -->
+		<dependency>
+			<groupId>dnl.utils</groupId>
+			<artifactId>j-text-utils</artifactId>
+			<version>0.3.3</version>
+		</dependency>
+		<!-- colored console output -->
+		<dependency>
+			<groupId>org.fusesource.jansi</groupId>
+			<artifactId>jansi</artifactId>
+			<version>1.11</version>
+		</dependency>
+		<!-- LICENSE: Public Domain -->
+		<!-- used for image preprocessing -->
+		<dependency>
+			<groupId>gov.nih.imagej</groupId>
+			<artifactId>imagej</artifactId>
+			<version>1.47</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<!-- http://pdfbox.apache.org/ -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<!-- http://poi.apache.org/ -->
+		<!-- Java API for Microsoft Documents -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-examples</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<!-- http://incubator.apache.org/odftoolkit/ -->
+		<!-- Java API for Open Document Format -->
+		<dependency>
+			<groupId>org.odftoolkit</groupId>
+			<artifactId>simple-odf</artifactId>
+			<version>0.6.6</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<!-- http://tika.apache.org/ -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<!-- LICENSE: GNU Lesser General Public License -->
+		<dependency>
+			<groupId>org.ghost4j</groupId>
+			<artifactId>ghost4j</artifactId>
+			<version>0.5.2-SNAPSHOT</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.james</groupId>
+			<artifactId>apache-mime4j-core</artifactId>
+			<version>0.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.james</groupId>
+			<artifactId>apache-mime4j-dom</artifactId>
+			<version>0.7.2</version>
+		</dependency>
+		<!-- used by UniversalEncodingListener -->
+		<dependency>
+			<groupId>com.googlecode.juniversalchardet</groupId>
+			<artifactId>juniversalchardet</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<!-- used by ImageMetadataExtractor -->
+		<dependency>
+			<groupId>com.drewnoakes</groupId>
+			<artifactId>metadata-extractor</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<!-- used by BoilerpipeContentHandler -->
+		<dependency>
+			<groupId>de.l3s.boilerpipe</groupId>
+			<artifactId>boilerpipe</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<!-- used by HtmlParser -->
+		<dependency>
+			<groupId>org.ccil.cowan.tagsoup</groupId>
+			<artifactId>tagsoup</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<!-- LICENSE: Apache License V2.0 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.0</version>
+		</dependency>
+		<!-- used by feed parser -->
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- ************************************************* -->
+	</dependencies>
+</project>

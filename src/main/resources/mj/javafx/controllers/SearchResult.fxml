@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" styleClass="settingsManager" stylesheets="@MetroLight.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mj.javafx.controllers.SearchResult">
+   <children>
+      <SplitPane fx:id="pane" dividerPositions="0.1652542372881356, 0.8305084745762712" layoutX="174.0" layoutY="107.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="35.0">
+               <children>
+                  <Button fx:id="githubButton" contentDisplay="RIGHT" layoutX="1.0" layoutY="4.0" mnemonicParsing="false" onAction="#githubButtonClicked" styleClass="github">
+                     <graphic>
+                        <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@github.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="title" alignment="CENTER" layoutX="281.0" layoutY="7.0" prefHeight="35.0" prefWidth="598.0" text="Title" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="resizeButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#resizeButtonClicked" styleClass="github" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="3.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@reload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <ScrollPane fx:id="resultScrollPane" fitToHeight="true" fitToWidth="true" prefViewportHeight="224.0" prefViewportWidth="328.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                     <content>
+                        <TextFlow fx:id="resultText" prefHeight="200.0" prefWidth="200.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+                           </padding></TextFlow>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity">
+               <children>
+                  <VBox layoutY="5.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="14.0" layoutY="5.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="detailButton" defaultButton="true" mnemonicParsing="false" onAction="#detailButtonClicked" text="More details">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="helpButton" mnemonicParsing="false" onAction="#helpButtonClicked" text="Help">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@help.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox fx:id="progressBox" alignment="CENTER" prefHeight="500.0" prefWidth="750.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="400.0">
+               <children>
+                  <ProgressIndicator fx:id="progressIndicator" focusTraversable="false" />
+                  <Label fx:id="progressLabel" text="Rendering">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="21.0" fitWidth="15.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0">
+         <image>
+            <Image url="@resize_corner.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

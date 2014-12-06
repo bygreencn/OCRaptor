@@ -1,0 +1,269 @@
+<link rel="stylesheet" href="markdown5.css"/>
+<meta charset="utf-8"/>
+<h1 id="ocraptor">OCRaptor</h1>
+<p><img alt="Alt text" src="img/OCRaptorIcon.png" /></p>
+<p>This program allows you to create a full-text index of your document files in a specified folder.
+You can search that index rather than running a full-text search of each individul document file in your catalog.
+An index search produces a results list with links to the occurrences of the indexed documents.
+The main focus of this application lies on <a href="http://en.wikipedia.org/wiki/Optical_character_recognition">optical character recognition (OCR)</a>.
+It extracts text from your (embedded/standalone) image files and stores them in a searchable and portable database.
+In addition, OCRaptor also stores plain text and metadata of your documents.</p>
+<p>The application supports a <a href="#SupportedFiletypes">wide variety of document filetypes</a></p>
+<p><a name="Outline"></a></p>
+<h1 id="outline">Outline</h1>
+<div class="toc">
+<ul>
+<li><a href="#ocraptor">OCRaptor</a></li>
+<li><a href="#outline">Outline</a></li>
+<li><a href="#system-requirements">System requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#supported-filetypes">Supported filetypes</a></li>
+<li><a href="#interface">Interface</a><ul>
+<li><a href="#quick-guide">Quick Guide</a></li>
+<li><a href="#adding-a-new-database">Adding a new Database</a></li>
+<li><a href="#editing-your-database">Editing your Database</a></li>
+<li><a href="#searching-your-database">Searching your Database</a></li>
+<li><a href="#search-result-screen">Search Result Screen</a></li>
+<li><a href="#settings-manager">Settings Manager</a><ul>
+<li><a href="#option-enable-optical-character-recognition-ocr">Option: 'Enable optical character recognition (OCR)'</a></li>
+<li><a href="#option-include-metadata">Option: 'Include Metadata'</a></li>
+<li><a href="#option-include-standalone-image-files">Option: 'Include standalone image files'</a></li>
+<li><a href="#option-include-text-files">Option: 'Include text files'</a></li>
+<li><a href="#option-preprocess-images-for-ocr">Option: 'Preprocess images for OCR'</a></li>
+<li><a href="#option-only-show-new-files-while-indexing">Option: 'Only show new files while indexing'</a></li>
+<li><a href="#option-ocr-language">Option: 'OCR Language'</a></li>
+<li><a href="#option-enable-bug-report-screens">Option: 'Enable bug report screens'</a></li>
+<li><a href="#option-pause-indexing-on-error">Option: 'Pause indexing on error'</a></li>
+<li><a href="#option-enable-app-command-stderr-output">Option: 'Enable app command stderr output'</a></li>
+<li><a href="#option-always-remove-missing-files-from-database">Option: 'Always remove missing files from database'</a></li>
+<li><a href="#option-max-search-results-to-show">Option: 'Max search results to show'</a></li>
+<li><a href="#option-number-of-cpu-cores-to-use">Option: 'Number of CPU-Cores to use'</a></li>
+<li><a href="#option-passwords">Option: 'Passwords'</a></li>
+<li><a href="#option-text-file-extensions">Option: 'Text file extensions'</a></li>
+<li><a href="#option-image-properties">Option: Image properties</a></li>
+<li><a href="#option-bashshell-commands">Option: 'Bash/Shell commands'</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#command-line-version">Command Line Version</a><ul>
+<li><a href="#options">Options</a></li>
+</ul>
+</li>
+<li><a href="#faq">FAQ</a><ul>
+<li><a href="#ocr">OCR</a></li>
+<li><a href="#indexing">Indexing</a></li>
+</ul>
+</li>
+<li><a href="#release-notes">Release Notes</a></li>
+<li><a href="#requestedplaned-features">Requested/Planed features</a></li>
+<li><a href="#privacy-policy">Privacy Policy</a></li>
+<li><a href="#contact-me">Contact me</a></li>
+</ul>
+</div>
+<h1 id="system-requirements">System requirements</h1>
+<ul>
+<li>Microsoft Windows 7/8 64Bit</li>
+<li>Linux 64Bit</li>
+<li>Apple OSX 10.8-10.10</li>
+</ul>
+<p>Due to time constraints, 32Bit-Systems are not supported. OCRaptor comes with a build-in Java 8 Runtime Environment.</p>
+<h1 id="installation">Installation</h1>
+<p>The installation of OCRaptor is a straightforward process, requiring minimum user input. Just download the application from:</p>
+<ul>
+<li><a href="http://workupload.com/file/t7Us5fG2">Microsoft Windows 7/8 64Bit</a></li>
+<li>Linux 64Bit (Not online yet)</li>
+<li>Apple OSX 10.8-10.10 (Not online yet)</li>
+</ul>
+<p><a name="SupportedFiletypes"></a></p>
+<h1 id="supported-filetypes">Supported filetypes</h1>
+<ul>
+<li>Image files:<ul>
+<li>JPEG, PNG, TIFF, BMP, GIF</li>
+</ul>
+</li>
+<li>Microsoft Office:<ul>
+<li>Word, Excel, Powerpoint,
+    <a href="http://windows.microsoft.com/en-us/windows7/products/features/xps">XPS</a>,
+    <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a>,
+    <a href="http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help">CHM</a></li>
+</ul>
+</li>
+<li>LibreOffice / OpenOffice:<ul>
+<li>Writer, Impress, Calc</li>
+</ul>
+</li>
+<li>Apple iWork'09:<ul>
+<li>Pages, Numbers, Key</li>
+</ul>
+</li>
+<li>Adobe PDF</li>
+<li><a href="http://en.wikipedia.org/wiki/PostScript">Postscript</a></li>
+<li>XML, HTML</li>
+<li><a href="http://en.wikipedia.org/wiki/EPUB">EPUB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xournal">Xournal</a></li>
+<li>Plain textfiles</li>
+<li>Planned filetypes:<ul>
+<li>Apple iWork'13</li>
+<li>Archives-files (<em>.zip, </em>.rar...)</li>
+<li><a href="http://en.wikipedia.org/wiki/DjVu">DjVu</a></li>
+<li>Microsoft Publisher</li>
+<li>Microsoft OneNote</li>
+<li><a href="https://evernote.com/intl/de/">Evernote</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RSS">RSS-Feeds</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="interface">Interface</h1>
+<p><a name="SelectDatabase"></a></p>
+<h2 id="quick-guide">Quick Guide</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><img alt="" src="img/SelectDatabase01-en.png" />
+<img alt="" src="img/AddDatabase01-en.png" />
+<img alt="" src="img/SelectDatabase02-en.png" />
+<img alt="" src="img/EditDatabase01-en.png" />
+<img alt="" src="img/EditDatabase02-en.png" />
+<img alt="" src="img/SettingsManager01-en.png" />
+<img alt="" src="img/LoadingScreen01-en.png" />
+<img alt="" src="img/LoadingScreen02-en.png" />
+<img alt="" src="img/SearchDialog01-en.png" />
+<img alt="" src="img/SearchDialog02-en.png" />
+<img alt="" src="img/SearchResult01-en.png" />
+<img alt="" src="img/SearchResult02-en.png" /></p>
+<p><a name="AddDatabase"></a></p>
+<h2 id="adding-a-new-database">Adding a new Database</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="EditDatabase"></a></p>
+<h2 id="editing-your-database">Editing your Database</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="SearchDialog"></a></p>
+<h2 id="searching-your-database">Searching your Database</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="SearchResult"></a></p>
+<h2 id="search-result-screen">Search Result Screen</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="SettingsManager"></a></p>
+<h2 id="settings-manager">Settings Manager</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="ENABLE_IMAGE_OCR"></a></p>
+<h3 id="option-enable-optical-character-recognition-ocr">Option: 'Enable optical character recognition (OCR)'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="INCLUDE_METADATA"></a></p>
+<h3 id="option-include-metadata">Option: 'Include Metadata'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="INCLUDE_STANDALONE_IMAGE_FILES"></a></p>
+<h3 id="option-include-standalone-image-files">Option: 'Include standalone image files'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="INCLUDE_TEXT_FILES"></a></p>
+<h3 id="option-include-text-files">Option: 'Include text files'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="PRE_PROCESS_IMAGES_FOR_OCR"></a></p>
+<h3 id="option-preprocess-images-for-ocr">Option: 'Preprocess images for OCR'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="NEW_FILES_NOTIFICATION_ONLY"></a></p>
+<h3 id="option-only-show-new-files-while-indexing">Option: 'Only show new files while indexing'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="DEFAULT_LANGUAGE_FOR_OCR"></a></p>
+<h3 id="option-ocr-language">Option: 'OCR Language'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="ENABLE_BUG_REPORT_SCREENS"></a></p>
+<h3 id="option-enable-bug-report-screens">Option: 'Enable bug report screens'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="PAUSE_ON_ERROR"></a></p>
+<h3 id="option-pause-indexing-on-error">Option: 'Pause indexing on error'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="ENABLE_USER_COMMAND_STDERR"></a></p>
+<h3 id="option-enable-app-command-stderr-output">Option: 'Enable app command stderr output'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="ALWAYS_REMOVE_MISSING_FILES_FROM_DB"></a></p>
+<h3 id="option-always-remove-missing-files-from-database">Option: 'Always remove missing files from database'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="MAX_SEARCH_RESULTS"></a></p>
+<h3 id="option-max-search-results-to-show">Option: 'Max search results to show'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="NUMBER_OF_CPU_CORES_TO_USE"></a></p>
+<h3 id="option-number-of-cpu-cores-to-use">Option: 'Number of CPU-Cores to use'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="PASSWORDS_TO_USE"></a></p>
+<h3 id="option-passwords">Option: 'Passwords'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="TEXT_FILE_EXTENSIONS"></a></p>
+<h3 id="option-text-file-extensions">Option: 'Text file extensions'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="MIN_IMAGE_SIZE_IN_KB"></a>
+<a name="MAX_IMAGE_SIZE_IN_KB"></a>
+<a name="MIN_IMAGE_WIDTH_FOR_OCR"></a>
+<a name="MAX_IMAGE_WIDTH_FOR_OCR"></a>
+<a name="MIN_IMAGE_HEIGHT_FOR_OCR"></a>
+<a name="MAX_IMAGE_HEIGHT_FOR_OCR"></a></p>
+<h3 id="option-image-properties">Option: Image properties</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="DIRECTORY_OPEN_CMD"></a>
+<a name="IMAGE_FILE_OPEN_CMD"></a></p>
+<h3 id="option-bashshell-commands">Option: 'Bash/Shell commands'</h3>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h1 id="command-line-version">Command Line Version</h1>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h2 id="options">Options</h2>
+<pre><code>**************************************************************************
+usage: indexer.jar -d &lt;DIR&gt; [-c &lt;FILE&gt;] [-i &lt;DIR&gt;] [-l &lt;STRING&gt;]
+        [-p] [-q] [-r] [-s] [-v] [-g] [-h] [-H]
+**************************************************************************
+ -d,--db-directory &lt;DIR&gt;   Path to your database directory [REQUIRED]
+ -c,--config-file &lt;FILE&gt;   Path to your configuration file.
+ -i,--index &lt;DIR&gt;          Path to the directory you want to index
+ -l,--locate &lt;STRING&gt;      Search database for given string
+ -p,--progress             Count files and show a progress-bar (takes
+                           longer).
+ -q,--quiet                Suppress any output.
+ -r,--reset-db             Reset given database
+ -s,--show-dialog          Show open-file dialog
+ -v,--verbose              Show more progress-information
+ -g,--gui                  Show GUI-Version.
+ -h,--help                 Shows this infopage.
+ -H,--extended-help        Shows a detailed infopage.
+**************************************************************************
+</code></pre>
+<h1 id="faq">FAQ</h1>
+<h2 id="ocr">OCR</h2>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h2 id="indexing">Indexing</h2>
+<p>The technology behind OCRaptor is called indexing. When you install the application...</p>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h1 id="release-notes">Release Notes</h1>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h1 id="requestedplaned-features">Requested/Planed features</h1>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<h1 id="privacy-policy">Privacy Policy</h1>
+<p>TODO :: TODO :: TODO :: TODO :: TODO :: TODO :: TODO</p>
+<p><a name="Contact"></a></p>
+<h1 id="contact-me">Contact me</h1>
+<pre><code>Name:   Michael Jedich
+E-mail: m.jedich@mail.de
+GitHub: https://github.com/kolbasa
+</code></pre>
+<p><font color='white'></p>
+<pre><code>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</code></pre>
+<p></font></p>

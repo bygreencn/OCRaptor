@@ -1,0 +1,143 @@
+#!/bin/bash
+# ---------------------------------------------------- #
+# -- If you want to index high-resolution image-files
+# -- you should reserve enough ram-space for the
+# -- application.
+# ---------------------------------------------------- #
+
+MIN_HEAP_SPACE_IN_MB=512
+MAX_HEAP_SPACE_IN_MB=4096
+
+# ---------------------------------------------------- #
+
+LINUX=false
+OSX=false
+if [ "$(uname)" == "Darwin" ]; then
+  OSX=true
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ];
+then
+  LINUX=true
+else
+  echo "[ERROR] NOT SUPPORTED SYSTEM: $(uname)"
+  exit 1
+fi
+
+# ---------------------------------------------------- #
+
+ARGUMENTS=( "$@" )
+GUI_OPTION=""
+BUILD_IN_JRE=false
+
+for arg in "${ARGUMENTS[@]}"; do
+  if (
+    [ "$arg" == "-gui"  ] || \
+    [ "$arg" == "--gui" ] || \
+    [ "$arg" == "-g"    ]
+     );
+  then
+    GUI_OPTION="-gui"
+  elif (
+    [ "$arg" == "-build-in-jre"  ] || \
+    [ "$arg" == "--build-in-jre" ] || \
+    [ "$arg" == "-b"             ]
+    );
+  then
+    BUILD_IN_JRE=true
+  fi
+done
+
+# ---------------------------------------------------- #
+
+JAVA_ERROR="[ERROR] 'java' WAS NOT FOUND ON YOUR SYSTEM
+Instructions can be found at:
+http://www.oracle.com/technetwork/java/\
+javase/downloads/jdk8-downloads-2133151.html"
+
+if ! $BUILD_IN_JRE ;then
+  if ! type "java" &> /dev/null; then
+    echo -e "$JAVA_ERROR"
+    if [ ! -z "$GUI_OPTION" ]; then
+      if $LINUX ;then
+        if type "xmessage" &> /dev/null; then
+          echo -e "$JAVA_ERROR" | xmessage -center -file -
+        fi
+      fi
+    fi
+    exit 1
+  fi
+fi
+
+
+# ---------------------------------------------------- #
+
+JRE_PATH=""
+JRE_BASE_PATH="res/bins/portable-java"
+
+if $BUILD_IN_JRE ;then
+  if $OSX ; then
+    JRE_PATH="$JRE_BASE_PATH/osx-x86-64/bin/"
+  elif $LINUX ;then
+    JRE_PATH="$JRE_BASE_PATH/lin-x86-64/bin/"
+  fi
+  PERM_ERROR="[ERROR] Java permissions not set."
+  if [[ ! -x "$JRE_PATH"java ]] ;then
+    chmod u+x "$JRE_PATH"java || \
+      (echo "$PERM_ERROR" && exit 1)
+  fi
+fi
+
+# ---------------------------------------------------- #
+
+# Current location, necessary if you execute
+# the script from a different location other
+# than the location of the script.
+CURRENT_DIR="$(pwd)"
+
+# script file location
+SOURCE="${BASH_SOURCE[0]}"
+# resolve $SOURCE until the file is no longer a symlink
+while [ -h "$SOURCE" ]; do
+  SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$SCRIPT_DIR/$SOURCE"
+done
+SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+APP_NAME="ocraptor"
+export TESSDATA_PREFIX="res/tess"
+export LC_NUMERIC="C"
+
+# ---------------------------------------------------- #
+
+cd "$SCRIPT_DIR" && clear
+
+"$JRE_PATH"java -cp "res/bins/jre-version-checker.jar:lib/*" \
+  "CommandLineInterpreter" "1.8" \
+  "res/cnfg/default.resources" "$GUI_OPTION" || exit 1
+
+if [ ! -z "$GUI_OPTION" ]; then
+  echo "Starting GUI..."
+fi
+
+
+# ---------------------------------------------------- #
+
+EXIT_CODE=0
+
+while [[ true ]]; do
+
+  "$JRE_PATH"java "-Xmx"$MAX_HEAP_SPACE_IN_MB"m" \
+    -Dfile.encoding=UTF-8 \
+    "-Xms"$MIN_HEAP_SPACE_IN_MB"m" \
+    -cp "res/bins/""$APP_NAME"".jar:lib/*" \
+    "mj.Main" "$@"
+  EXIT_CODE=$(echo $?)
+
+  if [ $EXIT_CODE -eq "0" ]; then break; fi
+  echo "EXIT-CODE:  "$EXIT_CODE" restarting..."
+
+done
+
+cd "$CURRENT_DIR" && exit $EXIT_CODE
+
+# ---------------------------------------------------- #
