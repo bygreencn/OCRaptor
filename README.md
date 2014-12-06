@@ -64,15 +64,15 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * **Microsoft Windows 7/8 64Bit**<br/>
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
-  `
+  ```
   OCRaptor
   OCRaptorCL
   OCRaptorPL
-  `
+  ```
 
-  ``
+  ```
   chmod u+x OCRaptor
-  ``
+  ```
 
 * Apple OSX 10.8-10.10
 
