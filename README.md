@@ -70,10 +70,13 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   or [mirror 2](http://workupload.com/file/b2OmCVjr)
   and follow the steps of the installer (there are no hidden adware options.)
 
+  ```
   Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-06 17:35<br/>
-  Size: 129 MB<br/>
-  Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e<br/>
+  Date: 2014-12-06 17:35
+  Size: 129 MB
+  Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e
+  ```
+  <!--- ` -->
 
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
@@ -107,10 +110,13 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
   or [mirror 2](http://workupload.com/file/jHwZVsO1) and extract it to your desired location.
 
+  ```
   Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-07 00:12<br/>
-  Size: 99.13<br/>
-  Md5sum: ff42549941a59101c7b4457e30656210<br/>
+  Date: 2014-12-07 00:12
+  Size: 99.13
+  Md5sum: ff42549941a59101c7b4457e30656210
+  ```
+  <!--- ` -->
 
 * ~~**Cross-platform version**~~ (Not ready yet)
 
