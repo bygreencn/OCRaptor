@@ -168,16 +168,16 @@ Just click on your entry and click '**Select**'.
 Now just drag and drop the folders you want to index.
 ![](img/EditDatabase01-en.png)
 
-TODO: description
+TODO: description.
 ![](img/EditDatabase02-en.png)
 
-TODO: description
+TODO: description.
 ![](img/SettingsManager01-en.png)
 
-TODO: description
+TODO: description.
 ![](img/LoadingScreen01-en.png)
 
-TODO: description
+TODO: description.
 ![](img/LoadingScreen02-en.png)
 
 TODO: description
