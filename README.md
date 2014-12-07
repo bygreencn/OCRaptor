@@ -10,7 +10,7 @@ The main focus of this application lies on [optical character recognition (OCR)]
 It extracts text from your (embedded/standalone) image files and stores them in a **searchable and portable database**.
 In addition, OCRaptor also stores plain text and metadata of your documents.
 
-The application supports a [wide variety of document filetypes](#SupportedFiletypes)
+The application supports a [wide variety of document filetypes](#SupportedFiletypes), so you don't have to convert your files to one required format.
 
 <!---
 <a name="Outline"></a>
