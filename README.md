@@ -22,7 +22,7 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 # System requirements
 * **Microsoft Windows** 7/8 x64
 * **Linux** x64
-* **Apple** OSX 10.8-10.10
+* **Apple OSX** 10.8-10.10
 
 OCRaptor requires at least 2048 MB of RAM.
 
@@ -157,7 +157,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 First of all, you need to add a new document database. Click on '**Add database**'.
 ![](img/SelectDatabase01-en.png)
 
-Select an empty folder and name it.
+Select an empty folder and name it, then click '**Save**'.
 ![](img/AddDatabase01-en.png)
 
 You should see a new entry in the 'Select database'-window.
