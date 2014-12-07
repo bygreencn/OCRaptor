@@ -161,7 +161,8 @@ Select an empty folder and name it, then click '**Save**'.
 ![](img/AddDatabase01-en.png)
 
 You should see a new entry in the '*Select database*'-window.
-The picture below shows three entries: 'Ebooks', 'Studies' and 'Personal Documents'
+The picture below shows three entries: 'Ebooks', 'Studies' and 'Personal Documents'.
+Just click on your entry and click '**Select**'.
 ![](img/SelectDatabase02-en.png)
 ![](img/EditDatabase01-en.png)
 ![](img/EditDatabase02-en.png)
