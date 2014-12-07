@@ -20,9 +20,9 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 -->
 
 # System requirements
-* Microsoft Windows 7/8 64Bit
-* Linux 64Bit
-* Apple OSX 10.8-10.10
+* **Microsoft Windows** 7/8 64Bit
+* **Linux** 64Bit
+* **Apple** OSX 10.8-10.10
 
 OCRaptor requires at least 2048 MB of RAM.
 
@@ -64,7 +64,7 @@ The 7zip-archive contains photos and scanned images of documents in English and 
 **BE AWARE THAT OCRAPTOR IS A WORK IN PROGRESS AND THEREFORE CONTAINS A VARIETY OF BUGS AND ROUGH EDGES. I STRONGLY ADVISE YOU NOT TO USE
 THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
-* **Microsoft Windows 7-8 64Bit**<br/>
+* **Microsoft Windows**<br/>
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
   [mirror 1](https://mega.co.nz/#!TUQzASLI!lLP0YTdDUrOzPe_oNVHFw4teqsKbR5uvv4G6I7RuH8g)
   or [mirror 2](http://workupload.com/file/b2OmCVjr)
@@ -75,7 +75,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Size: 129 MB<br/>
   Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e<br/>
 
-* **Linux 64Bit**<br/>
+* **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
   or [mirror 2](http://workupload.com/file/FUfv0iLv) and extract it to your desired location.
@@ -85,7 +85,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Size: 107.21<br/>
   Md5sum: ff42549941a59101c7b4457e30656210<br/>
 
-* **Apple OSX 10.8-10.10**<br/>
+* **Apple OSX**<br/>
   At the moment there is no OSX installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
   or [mirror 2](http://workupload.com/file/jHwZVsO1) and extract it to your desired location.
@@ -98,10 +98,11 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * ~~**Cross-platform version**~~ (Not ready yet)
 
 # Starting
-* **Microsoft Windows 7/8 64Bit**<br/>
+* **Microsoft Windows**<br/>
     Just double click the newly created desktop icon and the application should start.
   ![](img/Desktop-Icon-01-en.png)
-* **Linux 64Bit**<br/>
+
+* **Linux**<br/>
 
   Go to the extracted folder:<br/>
   ``cd OCRaptor-0.7.1-Linux``<br/>
@@ -112,8 +113,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Then execute the main shell sript:<br/>
   ``./OCRaptor``
 
-
-* **Apple OSX 10.8-10.10**<br/>
+* **Apple OSX**<br/>
 
 
   Go to the extracted folder:<br/>
