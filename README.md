@@ -86,6 +86,9 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Shell command for distributions based on Debian:<br/>
   ``sudo apt-get install tesseract-ocr libtesseract3 liblept4 ghostscript``
 
+  Shell command for Arch Linux distribution:<br/>
+  ``sudo pacman -S tesseract leptonica ghostscript``
+
   Version: 0.7.1 (06.12.2014)
   Date: 2014-12-07 00:12<br/>
   Size: 107.21<br/>
