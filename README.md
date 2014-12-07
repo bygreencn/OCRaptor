@@ -42,7 +42,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e<br/>
 
 * **Linux 64Bit**<br/>
-  At the moment there is no linux installer available. Just download the 7zip-archive from
+  At the moment there is no Linux installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
   or [mirror 2](http://workupload.com/file/FUfv0iLv) and extract it to your desired location.
 
@@ -52,8 +52,9 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Md5sum: ff42549941a59101c7b4457e30656210<br/>
 
 * **Apple OSX 10.8-10.10**<br/>
+  At the moment there is no OSX installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
-  or [mirror 2](http://workupload.com/file/jHwZVsO1)
+  or [mirror 2](http://workupload.com/file/jHwZVsO1) and extract it to your desired location.
 
   Version: 0.7.1 (06.12.2014)
   Date: 2014-12-07 00:12<br/>
