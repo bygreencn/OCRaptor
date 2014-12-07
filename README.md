@@ -335,6 +335,10 @@ TODO :: TODO :: TODO :: TODO :: TODO :: TODO
     **************************************************************************
 
 
+# Build from source
+
+TODO :: TODO :: TODO :: TODO :: TODO :: TODO
+
 # FAQ
 ## OCR
 
