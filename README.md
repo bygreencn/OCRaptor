@@ -63,6 +63,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 # Starting
 * **Microsoft Windows 7/8 64Bit**<br/>
+    Just double click the newly created desktop icon and the application should start.
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
 
