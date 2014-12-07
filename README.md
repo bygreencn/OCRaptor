@@ -129,10 +129,9 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 <a name="SelectDatabase"></a>
 ## Quick Guide
 
-TODO :: TODO :: TODO :: TODO :: TODO :: TODO
-
 First of all, you need to add a new document database. Click on '**Add database**'.
 ![](img/SelectDatabase01-en.png)
+Select an empty folder and name it.
 ![](img/AddDatabase01-en.png)
 ![](img/SelectDatabase02-en.png)
 ![](img/EditDatabase01-en.png)
