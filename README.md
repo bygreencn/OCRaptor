@@ -106,7 +106,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ``TODO:``
 
 * **Apple OSX**<br/>
-  The OSX package **has not been thoroughly tested** but it should work - theoretically.
+  The OSX package **has not been thoroughly tested**, but it should work - theoretically.
 
   Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
