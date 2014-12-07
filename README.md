@@ -66,29 +66,29 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 * **Microsoft Windows**<br/>
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
-  [mirror 1](https://mega.co.nz/#!TUQzASLI!lLP0YTdDUrOzPe_oNVHFw4teqsKbR5uvv4G6I7RuH8g)
-  or [mirror 2](http://workupload.com/file/b2OmCVjr)
+  [mirror 1](https://mega.co.nz/#!vQYmwRob!aUwNfGyzOpTmQUVgrEW9jemDX6VTqFNj7IZPt3-jZwY)
+  or [mirror 2](http://workupload.com/file/mAG5EMaM)
   and follow the steps of the installer (there are no hidden adware options.)
 
   ```
-  Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-06 17:35
+  Version: 0.7.1
+  Date: 2014-12-07 19:27
   Size: 129 MB
-  Md5sum: 6e87ad801ca42e96d1fc64b693d2f94e
+  Md5sum: 068b043d2c5032d9debcb80b5630d226
   ```
   <!--- ` -->
 
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
-  [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
-  or [mirror 2](http://workupload.com/file/FUfv0iLv), extract it to your desired location
+  [mirror 1](https://mega.co.nz/#!bUAxGLBI!ez2ne4-ciJP7j4wVFs61LCSheF1iq-CSQVSK5fPU2FA)
+  or [mirror 2](), extract it to your desired location
   and install the dependencies as [shown below](#Dependencies).
 
   ```
-  Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-07 00:12
-  Size: 107.21
-  Md5sum: ff42549941a59101c7b4457e30656210
+  Version: 0.7.1
+  Date: 2014-12-07 19:07
+  Size: 101 MB
+  Md5sum: d07a4844bfe72cb56c1095c863cee008
   ```
   <!--- ` -->
 
@@ -109,16 +109,16 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   The OSX package **has not been thoroughly tested**, but it should work - theoretically.
 
   Just download the 7zip-archive from
-  [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
-  or [mirror 2](http://workupload.com/file/jHwZVsO1), extract it to your desired location
+  [mirror 1](https://mega.co.nz/#!zRxTzYKB!a-5_2ZSz74Cu4Z6r0vnrw_An9rhqjNrcFhX6XPDTnz4)
+  or [mirror 2](), extract it to your desired location
   and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
 
   ```
   Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-07 00:12
-  Size: 99.13
-  Md5sum: ff42549941a59101c7b4457e30656210
+  Date: 2014-12-07 19:07
+  Size: 99.1 MB
+  Md5sum: c6ea00547993c013ea4841d78951be50
   ```
   <!--- ` -->
 
