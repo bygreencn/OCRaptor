@@ -82,10 +82,10 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   and install the dependencies as [shown below](#Dependencies).
 
   ```
-  Version: 0.7.1 (06.12.2014)<br/>
-  Date: 2014-12-07 00:12<br/>
-  Size: 107.21<br/>
-  Md5sum: ff42549941a59101c7b4457e30656210<br/>
+  Version: 0.7.1 (06.12.2014)
+  Date: 2014-12-07 00:12
+  Size: 107.21
+  Md5sum: ff42549941a59101c7b4457e30656210
   ```
   <!--- ` -->
 
