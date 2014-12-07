@@ -80,9 +80,8 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
   or [mirror 2](http://workupload.com/file/FUfv0iLv) and extract it to your desired location.
 
-  There are some packages that are required to run OCRaptor in Linux:
-  ``tesseract-ocr``
-  ``liblept4``
+  There are some packages that are required to run OCRaptor in Linux:<br/>
+  ``tesseract-ocr``, ``libtesseract3``, ``liblept4``, ``ghostscript``
 
   Version: 0.7.1 (06.12.2014)
   Date: 2014-12-07 00:12<br/>
