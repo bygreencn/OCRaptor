@@ -153,7 +153,8 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 <a name="SelectDatabase"></a>
 ## Quick Guide
 
-First of all, you need to add a new document database. Click on '**Add database**'.
+When you first open OCRaptor, you'll see this screen.
+To get started you need to add a new document database. Click on '**Add database**'.
 ![](img/SelectDatabase01-en.png)
 
 Select an empty folder and name it, then click '**Save**'.
@@ -170,7 +171,7 @@ Now just drag and drop the folders you want to index.
 They should appear in the list.
 ![](img/EditDatabase02-en.png)
 
-TODO: description.
+In the *Settings Manager* window you can configure which filetyps to include
 ![](img/SettingsManager01-en.png)
 
 TODO: description.
