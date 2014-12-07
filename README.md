@@ -80,7 +80,12 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   [mirror 1](https://mega.co.nz/#!WYBxQZSR!ISlEoRngJpu0G03aa8-BJx5U_cN5CkjWDC4NLv_AkTU)
   or [mirror 2](http://workupload.com/file/FUfv0iLv) and extract it to your desired location.
 
-  There are some packages that are required to run OCRaptor in Linux:<br/>
+  Version: 0.7.1 (06.12.2014)
+  Date: 2014-12-07 00:12<br/>
+  Size: 107.21<br/>
+  Md5sum: ff42549941a59101c7b4457e30656210<br/>
+
+  **There are some packages that are required to run OCRaptor in Linux**:<br/>
   ``tesseract-ocr``, ``libtesseract3``, ``liblept4``, ``ghostscript``
 
   Shell command for distributions based on **Debian**:<br/>
@@ -91,11 +96,6 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
   Shell command for the **RPM-based** distributions:<br/>
   ``TODO:``
-
-  Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-07 00:12<br/>
-  Size: 107.21<br/>
-  Md5sum: ff42549941a59101c7b4457e30656210<br/>
 
 * **Apple OSX**<br/>
   At the moment there is no OSX installer available. Just download the 7zip-archive from
