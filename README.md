@@ -140,7 +140,6 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 * **Apple OSX**<br/>
 
-
   Go to the extracted folder:<br/>
   ``cd OCRaptor-0.7.1-Osx``<br/>
 
@@ -168,7 +167,7 @@ Just click on your entry and click '**Select**'.
 Now just drag and drop the folders you want to index.
 ![](img/EditDatabase01-en.png)
 
-TODO: description.
+They should appear in the list.
 ![](img/EditDatabase02-en.png)
 
 TODO: description.
