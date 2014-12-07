@@ -131,6 +131,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 
+First of all, you need to add a new document database. Click on 'Add database'
 ![](img/SelectDatabase01-en.png)
 ![](img/AddDatabase01-en.png)
 ![](img/SelectDatabase02-en.png)
