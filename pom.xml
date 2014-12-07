@@ -207,9 +207,6 @@
 										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/win-x86-64"
 										includes="**" />
 									<fileset
-										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/lin-x86-64"
-										includes="**" />
-									<fileset
 										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j-native-binaries/osx-x86-64"
 										includes="**" />
 								</copy>
@@ -339,15 +336,21 @@
 								<delete file="${buildDirWin}/OCRaptorCL" />
 								<delete file="${buildDirWin}/OCRaptorPL" />
 								<delete
-									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
+									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/lin-x86-64"
+									failonerror="false" />
 								<delete
-									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
-								<delete file="${buildDirWin}/${libDir}/libsigar-amd64-linux.so" />
-								<delete file="${buildDirWin}/${libDir}/libsigar-ia64-linux.so" />
+									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/osx-x86-64"
+									failonerror="false" />
+								<delete file="${buildDirWin}/${libDir}/libsigar-amd64-linux.so"
+									failonerror="false" />
+								<delete file="${buildDirWin}/${libDir}/libsigar-ia64-linux.so"
+									failonerror="false" />
 								<delete
-									file="${buildDirWin}/${libDir}/libsigar-universal-macosx.dylib" />
+									file="${buildDirWin}/${libDir}/libsigar-universal-macosx.dylib"
+									failonerror="false" />
 								<delete
-									file="${buildDirWin}/${libDir}/libsigar-universal64-macosx.dylib" />
+									file="${buildDirWin}/${libDir}/libsigar-universal64-macosx.dylib"
+									failonerror="false" />
 								<!-- ********************************************************** -->
 
 								<!-- }}} -->
@@ -371,16 +374,23 @@
 								<delete file="${buildDirLin}/OCRaptorCL.bat" />
 								<delete file="${buildDirLin}/OCRaptorPL.bat" />
 								<delete
-									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/win-x86-64" />
+									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/win-x86-64"
+									failonerror="false" />
 								<delete
-									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
-								<delete file="${buildDirLen}/${libDir}/libsigar-amd64-linux.so" />
-								<delete file="${buildDirLen}/${libDir}/libsigar-ia64-linux.so" />
+									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/osx-x86-64"
+									failonerror="false" />
+								<delete file="${buildDirLen}/${libDir}/libsigar-amd64-linux.so"
+									failonerror="false" />
+								<delete file="${buildDirLen}/${libDir}/libsigar-ia64-linux.so"
+									failonerror="false" />
 								<delete
-									file="${buildDirLin}/${libDir}/libsigar-universal-macosx.dylib" />
+									file="${buildDirLin}/${libDir}/libsigar-universal-macosx.dylib"
+									failonerror="false" />
 								<delete
-									file="${buildDirLin}/${libDir}/libsigar-universal64-macosx.dylib" />
-								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll" />
+									file="${buildDirLin}/${libDir}/libsigar-universal64-macosx.dylib"
+									failonerror="false" />
+								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll"
+									failonerror="false" />
 								<chmod dir="${buildDirLin}" perm="ugo+rx" includes="**/OCRaptor*" />
 								<!-- ********************************************************** -->
 
@@ -404,10 +414,13 @@
 								<delete file="${buildDirOsx}/OCRaptorCL.bat" />
 								<delete file="${buildDirOsx}/OCRaptorPL.bat" />
 								<delete
-									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/lin-x86-64"
+									failonerror="false" />
 								<delete
-									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
-								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll" />
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/osx-x86-64"
+									failonerror="false" />
+								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll"
+									failonerror="false" />
 								<chmod dir="${buildDirOsx}" perm="ugo+rx" includes="**/OCRaptor*" />
 								<!-- ********************************************************** -->
 
