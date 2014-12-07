@@ -81,7 +81,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   or [mirror 2](http://workupload.com/file/FUfv0iLv), extract it to your desired location
   and install the dependencies as [shown below](#Dependencies).
 
-  ```
+  ``
   Version: 0.7.1 (06.12.2014)<br/>
   Date: 2014-12-07 00:12<br/>
   Size: 107.21<br/>
