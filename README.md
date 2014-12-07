@@ -172,7 +172,8 @@ They should appear in the list.
 ![](img/EditDatabase02-en.png)
 
 In the '*Settings Manager*' screen ('**Config**'-button) you can configure
-which filetypes to include (e.g. Adobe PDF).<br/>
+which filetypes to include (e.g. Adobe PDF). When you click '**Save**' you
+will return to the previous screen.<br/>
 ![](img/SettingsManager01-en.png)
 
 TODO: description.
