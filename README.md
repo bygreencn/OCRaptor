@@ -68,7 +68,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
   [mirror 1](https://mega.co.nz/#!vQYmwRob!aUwNfGyzOpTmQUVgrEW9jemDX6VTqFNj7IZPt3-jZwY)
   or [mirror 2](http://workupload.com/file/mAG5EMaM)
-  and follow the steps of the installer (there are no hidden adware options.)
+  and follow the steps of the installer (**there are no hidden adware options**).
 
   ```
   Version: 0.7.1
@@ -81,7 +81,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!bUAxGLBI!ez2ne4-ciJP7j4wVFs61LCSheF1iq-CSQVSK5fPU2FA)
-  or [mirror 2](), extract it to your desired location
+  or [mirror 2](http://workupload.com/file/4nSBGjNq), extract it to your desired location
   and install the dependencies as [shown below](#Dependencies).
 
   ```
@@ -110,7 +110,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
   Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!zRxTzYKB!a-5_2ZSz74Cu4Z6r0vnrw_An9rhqjNrcFhX6XPDTnz4)
-  or [mirror 2](), extract it to your desired location
+  or [mirror 2](http://workupload.com/file/gbvs0mIj), extract it to your desired location
   and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
 
