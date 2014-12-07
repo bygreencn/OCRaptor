@@ -26,6 +26,37 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 Due to time constraints, 32Bit-Systems are not supported.<br/>
 OCRaptor comes with a **build-in Java 8** Runtime Environment.
 
+<a name="SupportedFiletypes"></a>
+# Supported filetypes
+* **Image files**
+    * JPEG, PNG, TIFF, BMP, GIF
+* **Microsoft Office**
+    * Word, Excel, Powerpoint,
+        [XPS](http://windows.microsoft.com/en-us/windows7/products/features/xps),
+        [RTF](http://en.wikipedia.org/wiki/Rich_Text_Format),
+        [CHM](http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help)
+* **LibreOffice / OpenOffice**
+    * Writer, Impress, Calc
+* **Apple iWork'09**
+    * Pages, Numbers, Key
+* Adobe PDF
+* [Postscript](http://en.wikipedia.org/wiki/PostScript)
+* XML, HTML
+* [EPUB](http://en.wikipedia.org/wiki/EPUB)
+* [Xournal](http://en.wikipedia.org/wiki/Xournal)
+* Plain textfiles<br/><br/>
+* **Planned filetypes**
+    * Apple iWork'13
+    * Archives-files (*.zip, *.rar...)
+    * [DjVu](http://en.wikipedia.org/wiki/DjVu)
+    * Microsoft Publisher
+    * Microsoft OneNote
+    * [Evernote](https://evernote.com/intl/de/)
+    * [RSS-Feeds](http://en.wikipedia.org/wiki/RSS)
+
+If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
+The 7zip-archive contains photos and scanned images of documents in English and German.
+
 # Download and Installation
 **BE AWARE THAT OCRAPTOR IS A WORK IN PROGRESS AND THEREFORE CONTAINS A VARIETY OF BUGS AND ROUGH EDGES. I STRONGLY ADVISE YOU NOT TO USE
 THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
@@ -90,38 +121,6 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
   Then execute the main shell sript:<br/>
   ``./OCRaptor``
-
-
-If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
-The 7zip-archive contains photos and scanned images of documents in English and German.
-
-<a name="SupportedFiletypes"></a>
-# Supported filetypes
-* **Image files**
-    * JPEG, PNG, TIFF, BMP, GIF
-* **Microsoft Office**
-    * Word, Excel, Powerpoint,
-        [XPS](http://windows.microsoft.com/en-us/windows7/products/features/xps),
-        [RTF](http://en.wikipedia.org/wiki/Rich_Text_Format),
-        [CHM](http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help)
-* **LibreOffice / OpenOffice**
-    * Writer, Impress, Calc
-* **Apple iWork'09**
-    * Pages, Numbers, Key
-* Adobe PDF
-* [Postscript](http://en.wikipedia.org/wiki/PostScript)
-* XML, HTML
-* [EPUB](http://en.wikipedia.org/wiki/EPUB)
-* [Xournal](http://en.wikipedia.org/wiki/Xournal)
-* Plain textfiles<br/><br/>
-* **Planned filetypes**
-    * Apple iWork'13
-    * Archives-files (*.zip, *.rar...)
-    * [DjVu](http://en.wikipedia.org/wiki/DjVu)
-    * Microsoft Publisher
-    * Microsoft OneNote
-    * [Evernote](https://evernote.com/intl/de/)
-    * [RSS-Feeds](http://en.wikipedia.org/wiki/RSS)
 
 # Interface
 <a name="SelectDatabase"></a>
