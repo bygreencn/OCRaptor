@@ -68,15 +68,15 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
     Just double click the newly created desktop icon and the application should start.
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
-  Go to the extracted folder:
+  Go to the extracted folder:<br/>
   ``
   cd OCRaptor-0.7.1-Linux
   ``
-  Before starting OCRaptor you should assign some execute permission:
+  Before starting OCRaptor you should assign some execute permission:<br/>
   ``
   chmod u+x OCRaptor*
   ``
-  Then execute the shell sript:
+  Then execute the shell sript:<br/>
 
   ``
   ./OCRaptor
