@@ -72,10 +72,10 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Go to the extracted folder:<br/>
   ``cd OCRaptor-0.7.1-Linux``<br/>
 
-  Before starting OCRaptor you should assign some execute permission:<br/>
+  Before starting OCRaptor you should assign some execute permissions:<br/>
   ``chmod u+x OCRaptor*``<br/>
 
-  Then execute the shell sript:<br/>
+  Then execute the main shell sript:<br/>
   ``./OCRaptor``
 
 
