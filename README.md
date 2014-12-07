@@ -2,7 +2,7 @@ OCRaptor
 ====
 ![Alt text](img/OCRaptorIcon.png)
 
-This program allows you to create a **full-text index** of your document files in a specified folder.
+**OCRaptor** allows you to create a **full-text index** of your document files in a specified folder.
 You can search that index rather than running a full-text search of each individul document file in your catalog.
 An index search produces a results list with links to the occurrences of the indexed documents.<br/>
 The main focus of this application lies on [optical character recognition (OCR)](http://en.wikipedia.org/wiki/Optical_character_recognition).
