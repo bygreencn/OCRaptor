@@ -81,17 +81,16 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 
 * **Apple OSX 10.8-10.10**<br/>
 
-  ``
-  cd OCRaptor-0.7.1-Osx
-  ``
 
-  ``
-  chmod u+x OCRaptor*
-  ``
+  Go to the extracted folder:<br/>
+  ``cd OCRaptor-0.7.1-Osx``<br/>
 
-  ``
-  ./OCRaptor
-  ``
+  Before starting OCRaptor you should assign some execute permissions:<br/>
+  ``chmod u+x OCRaptor*``<br/>
+
+  Then execute the main shell sript:<br/>
+  ``./OCRaptor``
+
 
 If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
 The 7zip-archive contains photos and scanned images of documents in English and German.
