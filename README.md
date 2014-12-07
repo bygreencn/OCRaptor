@@ -20,8 +20,8 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 -->
 
 # System requirements
-* **Microsoft Windows** 7/8 64Bit
-* **Linux** 64Bit
+* **Microsoft Windows** 7/8 x64
+* **Linux** x64
 * **Apple** OSX 10.8-10.10
 
 OCRaptor requires at least 2048 MB of RAM.
