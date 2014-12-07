@@ -160,7 +160,7 @@ First of all, you need to add a new document database. Click on '**Add database*
 Select an empty folder and name it, then click '**Save**'.
 ![](img/AddDatabase01-en.png)
 
-You should see a new entry in the 'Select database'-window.
+You should see a new entry in the '*Select database*'-window.
 ![](img/SelectDatabase02-en.png)
 ![](img/EditDatabase01-en.png)
 ![](img/EditDatabase02-en.png)
