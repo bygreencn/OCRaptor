@@ -54,7 +54,7 @@ OCRaptor comes with a **build-in Java 8** Runtime Environment.
     * [Evernote](https://evernote.com/intl/de/)
     * [RSS-Feeds](http://en.wikipedia.org/wiki/RSS)
 
-If you need sample image scans to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
+If you need **sample image scans** to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
 The 7zip-archive contains photos and scanned images of documents in English and German.
 
 # Download and Installation
