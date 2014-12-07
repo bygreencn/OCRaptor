@@ -7,7 +7,7 @@ You can search that index rather than running a full-text search of each individ
 An index search produces a results list with links to the occurrences of the indexed documents.
 
 The main focus of this application lies on [optical character recognition (OCR)](http://en.wikipedia.org/wiki/Optical_character_recognition).
-It extracts text from your (embedded/standalone) image files and stores them in a searchable and portable database.
+It extracts text from your (embedded/standalone) image files and stores them in a **searchable and portable database**.
 In addition, OCRaptor also stores plain text and metadata of your documents.
 
 The application supports a [wide variety of document filetypes](#SupportedFiletypes)
