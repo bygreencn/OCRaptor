@@ -164,6 +164,8 @@ You should see a new entry in the '*Select database*'-window.
 The picture below shows three entries: 'Ebooks', 'Studies' and 'Personal Documents'.
 Just click on your entry and click '**Select**'.
 ![](img/SelectDatabase02-en.png)
+
+Now just drag and drop the folders you want to index.
 ![](img/EditDatabase01-en.png)
 ![](img/EditDatabase02-en.png)
 ![](img/SettingsManager01-en.png)
