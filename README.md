@@ -85,7 +85,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Size: 107.21<br/>
   Md5sum: ff42549941a59101c7b4457e30656210<br/>
 
-  **There are some packages that are required to run OCRaptor in Linux**:<br/>
+  There are some packages that are required to run OCRaptor in Linux:<br/>
   ``tesseract-ocr``, ``libtesseract3``, ``liblept4``, ``ghostscript``
 
   Shell command for distributions based on **Debian**:<br/>
