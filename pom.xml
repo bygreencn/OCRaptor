@@ -335,7 +335,6 @@
 								</copy>
 								<delete file="${buildDirWin}/liblept.dylib" />
 								<delete file="${buildDirWin}/libtesseract.dylib" />
-								<delete file="${buildDirWin}/libtesseract.so" />
 								<delete file="${buildDirWin}/OCRaptor" />
 								<delete file="${buildDirWin}/OCRaptorCL" />
 								<delete file="${buildDirWin}/OCRaptorPL" />
@@ -399,7 +398,6 @@
 								<delete file="${buildDirOsx}/gsdll64.dll" />
 								<delete file="${buildDirOsx}/liblept168.dll" />
 								<delete file="${buildDirOsx}/libtesseract302.dll" />
-								<delete file="${buildDirOsx}/libtesseract.so" />
 
 								<delete file="${buildDirOsx}/OCRaptor.exe" />
 								<delete file="${buildDirOsx}/OCRaptor.bat" />

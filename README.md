@@ -106,9 +106,13 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ``TODO:``
 
 * **Apple OSX**<br/>
+  The OSX-version **has not been thoroughly tested** but it should work theoretically if you install ``tesseract`` and ``ghostscript`` with ``brew``.
+
   At the moment there is no OSX installer available. Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
   or [mirror 2](http://workupload.com/file/jHwZVsO1) and extract it to your desired location.
+
+
 
   ```
   Version: 0.7.1 (06.12.2014)
@@ -117,8 +121,6 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Md5sum: ff42549941a59101c7b4457e30656210
   ```
   <!--- ` -->
-
-* ~~**Cross-platform version**~~ (Not ready yet)
 
 # Starting
 * **Microsoft Windows**<br/>
