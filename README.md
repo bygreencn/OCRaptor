@@ -111,7 +111,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Just download the 7zip-archive from
   [mirror 1](https://mega.co.nz/#!aNQ0zJ5C!fB2FsoRGc3o9tW24ZRmXQHuH28l4044roWyWe38PUKI)
   or [mirror 2](http://workupload.com/file/jHwZVsO1), extract it to your desired location
-  and install ``tesseract`` and ``ghostscript`` via ``brew``.
+  and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
 
   ```
