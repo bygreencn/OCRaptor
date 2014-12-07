@@ -24,6 +24,8 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 * Linux 64Bit
 * Apple OSX 10.8-10.10
 
+OCRaptor requires at least 2048 MB of RAM.
+
 Due to time constraints, 32Bit-Systems are not supported.<br/>
 OCRaptor comes with a **build-in Java 8** Runtime Environment.
 
