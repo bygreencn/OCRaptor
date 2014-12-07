@@ -86,8 +86,7 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   Date: 2014-12-07 00:12<br/>
   Size: 107.21<br/>
   Md5sum: ff42549941a59101c7b4457e30656210<br/>
-  ```
-  `
+  ``
 
   <a name="Dependencies"></a>
   There are some packages that are required to run OCRaptor in Linux:<br/>
