@@ -180,16 +180,16 @@ TODO: description.
 TODO: description.
 ![](img/LoadingScreen02-en.png)
 
-TODO: description
+TODO: description.
 ![](img/SearchDialog01-en.png)
 
-TODO: description
+TODO: description.
 ![](img/SearchDialog02-en.png)
 
-TODO: description
+TODO: description.
 ![](img/SearchResult01-en.png)
 
-TODO: description
+TODO: description.
 ![](img/SearchResult02-en.png)
 
 
