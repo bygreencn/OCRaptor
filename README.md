@@ -69,18 +69,11 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ![](img/Desktop-Icon-01-en.png)
 * **Linux 64Bit**<br/>
   Go to the extracted folder:<br/>
-  ``
-  cd OCRaptor-0.7.1-Linux
-  ``
+  ``cd OCRaptor-0.7.1-Linux``<br/>
   Before starting OCRaptor you should assign some execute permission:<br/>
-  ``
-  chmod u+x OCRaptor*
-  ``
+  ``chmod u+x OCRaptor*``<br/>
   Then execute the shell sript:<br/>
-
-  ``
-  ./OCRaptor
-  ``
+  ``./OCRaptor``
 
 
 * **Apple OSX 10.8-10.10**<br/>
