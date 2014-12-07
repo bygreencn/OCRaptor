@@ -171,7 +171,7 @@ Now just drag and drop the folders you want to index.
 They should appear in the list.
 ![](img/EditDatabase02-en.png)
 
-In the '*Settings Manager*' screen (click '*Config*'-button) you can configure
+In the '*Settings Manager*' screen ('**Config**'-button) you can configure
 which filetypes to include (e.g. Adobe PDF).<br/>
 ![](img/SettingsManager01-en.png)
 
