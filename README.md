@@ -54,11 +54,11 @@ this application in a produtive environment.**
 
 * **Microsoft Windows**<br/>
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
-  [here](/releases/latest) and follow the steps of the installer (there are no hidden adware options).
+  [here](releases/latest) and follow the steps of the installer (there are no hidden adware options).
 
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
-  [here](/releases/latest), extract it to your desired location and install the dependencies
+  [here](releases/latest), extract it to your desired location and install the dependencies
   as shown below.
 
   There are some packages that are required to run OCRaptor in Linux:<br/>
@@ -76,7 +76,7 @@ this application in a produtive environment.**
 * **Apple OSX**<br/>
   The OSX package **has not been thoroughly tested**, but it should work - theoretically.
 
-  Just download the 7zip-archive from [here](/releases/latest), extract it to your desired location
+  Just download the 7zip-archive from [here](releases/latest), extract it to your desired location
   and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
   If you encounter problems running OCRaptor on a Mac, please let me
@@ -117,67 +117,69 @@ When you first open OCRaptor, you will see this screen.
 To get started you need to add a new document database. Click on '**Add database**'.
 <br/>![](img/SelectDatabase01-en.png)<br/>
 
-Select an empty folder and name it, then click '**Save**'.
+Select an empty folder and name it, then click '**Save**'. You will
+return to the previous screen with a new entry.
 <br/>![](img/AddDatabase01-en.png)<br/>
 
-You should see a new entry in the '*Select database*'-window.
-The picture below shows three entries: 'Incoming Invoices' and 'Study Documents'.
-Just click on your entry and click '**Select**' to load the database.
+In this scenario there are two databases: 'Incoming Invoices' and 'Study Documents'.
+Simply mark your entry and click '**Select**' to load the database.
 <br/>![](img/SelectDatabase02-en.png)<br/>
 
-Now just drag and drop the folders you want to index.
+Now you have to select the directories you want to index. You can simply
+drag them into the window or select them by clicking '**Add Folder**'.
 <br/>![](img/EditDatabase01-en.png)<br/>
 
 They should now appear in the list.
 <br/>![](img/EditDatabase02-en.png)<br/>
 
-In the '*Settings Manager*' screen ('**Config**'-button) you can configure
-which filetypes to include (e.g. Adobe PDF).
+In the '*Settings Manager*' window ('**Config**' button) you can configure
+which filetypes you want to include (e.g. Adobe PDF, Microsoft Office).
 <br/>![](img/SettingsManager01-en.png)<br/>
 
-Now click on the Index Button to populate your file database. This step
+Now click the '**Index**' button to populate your file database. This step
 may take awhile, depending on size and number of files in your document
-folder. But you only have to do it once, after that you have a full
+folder. Text extraction from image files can be highly CPU-intensive.
+However, you only have to do it once, after that you have a full
 index of your scanned documents. If you add or modify files, then just repeat
 this step and OCRaptor will automatically update its index while
 skipping unchanged files.
 <br/>![](img/LoadingScreen01-en.png)<br/>
 
 Depending on your system's configuration, a firewall may request your
-permission to allow access to public networks. Just click cancel and
-block all requests. *OCRaptor does not try to connect to extern
-servers*, but it does use a server-client model for processing document
+permission to allow access to public networks. Click cancel and
+block all requests. **OCRaptor does not try to connect to extern
+servers**. However, it does use a server-client model for processing document
 files. This implementation is restricted to the local network. You can
 change the default port (1098) in the Settings Manager.
-Windows 10 Security Alert:
 <br/>![](img/WindowsFirewall01-en.png)<br/>
 
-Now you can search your document database.
+Now you can search your document database. Click **Search**.
 <br/>![](img/LoadingScreen02-en.png)<br/>
 
 Enter your search query.
 <br/>![](img/SearchDialog01-en.png)<br/>
 
 A simple search for a scanned invoice of a Raspberry Pi Infrared
-Camera.
+Camera. OCRaptor supports Boolean Operators, Wildcard Searches,
+Fuzzy Searches and Proximity Searches. I will update the documentation
+soon.
 <br/>![](img/SearchDialog02-en.png)<br/>
 
-The search result.
+The search result. If you click 'Open' your file will open in your default image viewer
+application. 
 <br/>![](img/SearchResult01-en.png)<br/>
 
-If you click 'Open' your file will open in your default image viewer
-application.
+The picture below shows the standard Windows 10 Photo
+Viewer.
 <br/>![](img/SearchResult02-en.png)<br/>
 
 
 # Command Line Version
 
-TODO :: TODO :: TODO :: TODO :: TODO :: TODO
+OCRaptor has also a fully functional commandline interface.
 
 ## Options
 
-    **************************************************************************
-    ERROR: Missing required option: d
     **************************************************************************
     usage: ocraptor-cl -d <DIR> [-c <FILE>] [-f <STRING>] [-i <DIR>] [-b] [-g]
            [-h] [-H] [-p] [-q] [-r] [-s] [-u] [-v]
@@ -373,5 +375,3 @@ TODO :: TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 
 </font>
 -->
-
->http://ueps.ddnss.de:82/o/ocraptor-testdocuments.7z
