@@ -122,18 +122,18 @@ Select an empty folder and name it, then click '**Save**'.
 
 You should see a new entry in the '*Select database*'-window.
 The picture below shows three entries: 'Incoming Invoices' and 'Study Documents'.
-Just click on your entry and click '**Select**' to load your database.
+Just click on your entry and click '**Select**' to load the database.
 <br/>![](img/SelectDatabase02-en.png)<br/>
 
 Now just drag and drop the folders you want to index.
-![](img/EditDatabase01-en.png)
+<br/>![](img/EditDatabase01-en.png)<br/>
 
 They should now appear in the list.
-![](img/EditDatabase02-en.png)
+<br/>![](img/EditDatabase02-en.png)<br/>
 
 In the '*Settings Manager*' screen ('**Config**'-button) you can configure
 which filetypes to include (e.g. Adobe PDF).
-![](img/SettingsManager01-en.png)
+<br/>![](img/SettingsManager01-en.png)<br/>
 
 Now click on the Index Button to populate your file database. This step
 may take awhile, depending on size and number of files in your document
@@ -141,7 +141,7 @@ folder. But you only have to do it once, after that you have a full
 index of your scanned documents. If you add or modify files, then just repeat
 this step and OCRaptor will automatically update its index while
 skipping unchanged files.
-![](img/LoadingScreen01-en.png)
+<br/>![](img/LoadingScreen01-en.png)<br/>
 
 Depending on your system's configuration, a firewall may request your
 permission to allow access to public networks. Just click cancel and
@@ -150,24 +150,24 @@ servers*, but it does use a server-client model for processing document
 files. This implementation is restricted to the local network. You can
 change the default port (1098) in the Settings Manager.
 Windows 10 Security Alert:
-![](img/WindowsFirewall01-en.png)
+<br/>![](img/WindowsFirewall01-en.png)<br/>
 
 Now you can search your document database.
-![](img/LoadingScreen02-en.png)
+<br/>![](img/LoadingScreen02-en.png)<br/>
 
 Enter your search query.
-![](img/SearchDialog01-en.png)
+<br/>![](img/SearchDialog01-en.png)<br/>
 
 A simple search for a scanned invoice of a Raspberry Pi Infrared
 Camera.
-![](img/SearchDialog02-en.png)
+<br/>![](img/SearchDialog02-en.png)<br/>
 
 The search result.
-![](img/SearchResult01-en.png)
+<br/>![](img/SearchResult01-en.png)<br/>
 
 If you click 'Open' your file will open in your default image viewer
 application.
-![](img/SearchResult02-en.png)
+<br/>![](img/SearchResult02-en.png)<br/>
 
 
 # Command Line Version
