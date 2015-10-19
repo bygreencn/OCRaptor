@@ -206,6 +206,15 @@ OCRaptor has a fully functional commandline interface.
      -v,--verbose              Show more progress-information
     **************************************************************************
 
+
+<br/>![](img/Console01-en.png)<br/>
+
+<br/>![](img/Console02-en.png)<br/>
+
+<br/>![](img/Console03-en.png)<br/>
+
+<br/>![](img/Console04-en.png)<br/>
+
 <a name="AddDatabase"></a>
 ## Adding a new Database
 

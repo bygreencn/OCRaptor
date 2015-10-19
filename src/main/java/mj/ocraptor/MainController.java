@@ -1020,7 +1020,7 @@ public class MainController {
             }
           }
         } catch (Exception e) {
-          e.printStackTrace();
+          //e.printStackTrace();
           COF.printSeparator();
           COF.printTextStretched(AnsiColor.RED_BACKGROUND.toString() + AnsiColor.WHITE.toString()
               + "not a valid command: " + line);
