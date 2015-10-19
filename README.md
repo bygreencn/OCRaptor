@@ -115,15 +115,15 @@ this application in a produtive environment.**
 
 When you first open OCRaptor, you will see this screen.
 To get started you need to add a new document database. Click on '**Add database**'.
-![](img/SelectDatabase01-en.png)
+<br/>![](img/SelectDatabase01-en.png)<br/>
 
 Select an empty folder and name it, then click '**Save**'.
-![](img/AddDatabase01-en.png)
+<br/>![](img/AddDatabase01-en.png)<br/>
 
 You should see a new entry in the '*Select database*'-window.
 The picture below shows three entries: 'Incoming Invoices' and 'Study Documents'.
 Just click on your entry and click '**Select**' to load your database.
-![](img/SelectDatabase02-en.png)
+<br/>![](img/SelectDatabase02-en.png)<br/>
 
 Now just drag and drop the folders you want to index.
 ![](img/EditDatabase01-en.png)
