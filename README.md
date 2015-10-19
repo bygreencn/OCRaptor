@@ -174,7 +174,7 @@ browser ([example](img/FulltextBrowser01-en.png)).
 <br/>![](img/SearchResult01-en.png)<br/>
 
 The picture below shows the standard Windows 10 Photo
-Viewer.
+Viewer with the actual image content.
 <br/>![](img/SearchResult02-en.png)<br/>
 
 
