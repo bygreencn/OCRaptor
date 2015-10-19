@@ -206,13 +206,16 @@ OCRaptor has a fully functional commandline interface.
      -v,--verbose              Show more progress-information
     **************************************************************************
 
-
-<br/>![](img/Console01-en.png)<br/>
-
+Starting the CL version
 <br/>![](img/Console02-en.png)<br/>
 
+Indexing files and showing progress
 <br/>![](img/Console03-en.png)<br/>
 
+Part of a search result for query: 'persons attempting'
+<br/>![](img/Console01-en.png)<br/>
+
+User dialog
 <br/>![](img/Console04-en.png)<br/>
 
 <a name="AddDatabase"></a>
