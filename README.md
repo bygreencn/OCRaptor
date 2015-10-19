@@ -18,7 +18,7 @@ The application supports a [wide variety of document filetypes](#SupportedFilety
 * **Apple OSX** 10.8-10.10
 
 OCRaptor comes with a **build-in Java 8** Runtime Environment. Make
-sure that your System has at least 2048 MB of RAM.
+sure that your system has at least 2048 MB of RAM.
 
 <a name="SupportedFiletypes"></a>
 # Supported filetypes
@@ -45,7 +45,9 @@ sure that your System has at least 2048 MB of RAM.
     * Microsoft Publisher
     * Microsoft OneNote
 
-If you need **sample image scans** to test OCRaptor, [here](http://ueps.ddnss.de:82/o/OCRaptor-Testdocuments.7z) are the files used in my test cases.<br/>
+If you need **sample image scans** to test OCRaptor,
+[here](https://github.com/kolbasa/OCRaptor/releases/download/v.0.5.1-alpha/OCRaptor-Testdocuments.7z)
+are the files used in my test cases.<br/>
 The 7zip-archive contains photos and scanned images of documents in English and German.
 
 # Download and Installation
@@ -54,11 +56,11 @@ this application in a produtive environment.**
 
 * **Microsoft Windows**<br/>
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
-  [here](releases/latest) and follow the steps of the installer (there are no hidden adware options).
+  [here](https://github.com/kolbasa/OCRaptor/releases/tag/v.0.5.1-alpha) and follow the steps of the installer (there are no hidden adware options).
 
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
-  [here](releases/latest), extract it to your desired location and install the dependencies
+  [here](https://github.com/kolbasa/OCRaptor/releases/tag/v.0.5.1-alpha), extract it to your desired location and install the dependencies
   as shown below.
 
   There are some packages that are required to run OCRaptor in Linux:<br/>
@@ -76,7 +78,7 @@ this application in a produtive environment.**
 * **Apple OSX**<br/>
   The OSX package **has not been thoroughly tested**, but it should work - theoretically.
 
-  Just download the 7zip-archive from [here](releases/latest), extract it to your desired location
+  Just download the 7zip-archive from [here](https://github.com/kolbasa/OCRaptor/releases/tag/v.0.5.1-alpha), extract it to your desired location
   and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
   If you encounter problems running OCRaptor on a Mac, please let me
@@ -162,11 +164,13 @@ Enter your search query.
 A simple search for a scanned invoice of a Raspberry Pi Infrared
 Camera. OCRaptor supports Boolean Operators, Wildcard Searches,
 Fuzzy Searches and Proximity Searches. I will update the documentation
-soon.
+soon on this topic.
 <br/>![](img/SearchDialog02-en.png)<br/>
 
-The search result. If you click 'Open' your file will open in your default image viewer
-application. 
+The search result. If you click '**Open**' your file will open in your default image viewer
+application. '**Show**' will mark the file in your default file browser.
+'**Fulltext**' will show you the complete text in your default web
+browser ([](example);
 <br/>![](img/SearchResult01-en.png)<br/>
 
 The picture below shows the standard Windows 10 Photo
@@ -176,7 +180,7 @@ Viewer.
 
 # Command Line Version
 
-OCRaptor has also a fully functional commandline interface.
+OCRaptor has a fully functional commandline interface.
 
 ## Options
 
