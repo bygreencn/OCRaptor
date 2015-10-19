@@ -170,7 +170,7 @@ soon on this topic.
 The search result. If you click '**Open**' your file will open in your default image viewer
 application. '**Show**' will mark the file in your default file browser.
 '**Fulltext**' will show you the complete text in your default web
-browser ([](example);
+browser ([example](img/FulltextBrowser01-en.png);
 <br/>![](img/SearchResult01-en.png)<br/>
 
 The picture below shows the standard Windows 10 Photo
