@@ -227,9 +227,7 @@ public class TextExtractorThread implements Runnable {
     if (this.currentDBFileEntry == null) {
       return NOT_FOUND;
     }
-
     String md5FromDB = this.currentDBFileEntry.getHash();
-
     if (md5FromDB == null || md5FromDB.trim().isEmpty()) {
       return NOT_FOUND;
     } else if (!md5FromDB.equals(currentFileMD5Hash)) {
@@ -296,9 +294,9 @@ public class TextExtractorThread implements Runnable {
 
       // check if file was found in the current database
       boolean unknownFile = hasUnknownFileHash(file);
+
       if (!unknownFile || !extractorTools.hasAvailableParsers(file)) {
         FileEntry onlyUpdateProgress = new FileEntry(file);
-
         if (unknownFile) {
           onlyUpdateProgress.setError(ResultError.NOT_SUPPORTED);
         } else {

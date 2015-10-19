@@ -13,9 +13,9 @@ In addition, OCRaptor also stores plain text and metadata of your documents.
 The application supports a [wide variety of document filetypes](#SupportedFiletypes), so you don't have to convert your files to one required format.
 
 # System requirements
-* **Microsoft Windows** 7/8 x64
+* **Microsoft Windows** 7/8/10 x64
 * **Linux** x64
-* **Apple OSX** 10.8-10.10
+* **Apple OSX** 10.8-10.11
 
 OCRaptor comes with a **build-in Java 8** Runtime Environment. Make
 sure that your system has at least 2048 MB of RAM.
@@ -169,8 +169,8 @@ soon on this topic.
 
 The search result. If you click '**Open**' your file will open in your default image viewer
 application. '**Show**' will mark the file in your default file browser.
-'**Fulltext**' will show you the complete text in your default web
-browser ([example](img/FulltextBrowser01-en.png);
+'**Fulltext**' will show you the complete entry in your default web
+browser ([example](img/FulltextBrowser01-en.png)).
 <br/>![](img/SearchResult01-en.png)<br/>
 
 The picture below shows the standard Windows 10 Photo

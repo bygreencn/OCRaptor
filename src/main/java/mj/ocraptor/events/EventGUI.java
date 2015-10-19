@@ -200,6 +200,7 @@ public class EventGUI extends EventAbstr {
 
             String shortFilePath = trimToLengthIndicatorLeft(filePath, 50);
             shortFilePath = shortenHomePathInDirectory(shortFilePath);
+            shortFilePath = FileTools.multiplatformPath(shortFilePath);
 
             cpu.setText(this.gui.getText("EVENT_GUI.CPU_THREAD", String.valueOf(++cpuIndex)));
             cpu.getStyleClass().add("cpuListText");

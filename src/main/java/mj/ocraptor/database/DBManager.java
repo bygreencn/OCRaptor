@@ -58,6 +58,7 @@ import mj.ocraptor.database.search.LuceneResult;
 import mj.ocraptor.file_handler.executer.CommandExecutor;
 import mj.ocraptor.file_handler.executer.handler_impl.SimpleOutput;
 import mj.ocraptor.file_handler.filter.FileType;
+import mj.ocraptor.file_handler.utils.FileTools;
 import mj.ocraptor.tools.St;
 
 import org.apache.commons.io.FilenameUtils;
@@ -648,7 +649,7 @@ public class DBManager {
     FileEntry entry = null;
     try {
       connection = this.getConnection();
-      entry = fileEntryDao.findByPath(filePath, connection);
+      entry = fileEntryDao.findByPath(FileTools.multiplatformPath(filePath), connection);
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
