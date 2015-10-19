@@ -1,0 +1,403 @@
+# --------------------------------------------- #
+# MAIN SETTINGS
+# --------------------------------------------- #
+
+# {{{
+
+ENABLE_IMAGE_OCR                    = true
+
+INCLUDE_METADATA                    = true
+
+# Textfiles:
+INCLUDE_TEXT_FILES                  = true
+
+# ebook format
+INCLUDE_EPUB_FILES                  = true
+
+INCLUDE_HTML_FILES                  = true
+
+INCLUDE_XML_FILES                   = true
+
+# http://xournal.sourceforge.net/
+INCLUDE_XOURNAL_FILES               = true
+
+# Microsoft Office Files:
+INCLUDE_MS_WORD_FILES               = true
+INCLUDE_MS_POWERPOINT_FILES         = true
+INCLUDE_MS_EXCEL_FILES              = true
+INCLUDE_MS_RTF_FILES                = true
+INCLUDE_MS_XPS_FILES                = true
+
+# LibreOffice/OpenOffice Files:
+INCLUDE_LO_WRITER_FILES             = true
+INCLUDE_LO_CALC_FILES               = true
+INCLUDE_LO_IMPRESS_FILES            = true
+
+
+# Image files
+INCLUDE_STANDALONE_IMAGE_FILES      = true
+
+# PDF documents
+INCLUDE_PDF_FILES                   = true
+
+# Postscript/PS documents
+INCLUDE_POSTSCRIPT_FILES            = true
+
+# deu := Deutsch (German)
+# eng := English
+#
+# separate with semicolon
+DEFAULT_LANGUAGE_FOR_OCR            = eng;deu;
+
+# ---------------------------------------- #
+# upcoming, but not yet supported filetypes
+
+# partially working
+# Apple iWork'09 supported
+# TODO: iWork'13 support is planned
+INCLUDE_APPLE_PAGES_FILES           = false
+INCLUDE_APPLE_NUMBERS_FILES         = false
+INCLUDE_APPLE_KEY_FILES             = false
+
+# http://en.wikipedia.org/wiki/Microsoft_Publisher
+INCLUDE_MS_PUBLISHER_FILES          = false
+
+# https://www.onenote.com/
+INCLUDE_MS_ONENOTE_FILES            = false
+
+INCLUDE_RSS_FEEDS                   = false
+INCLUDE_EMAIL_FILES                 = false
+
+# http://djvu.org/
+INCLUDE_DJVU_FILES                  = false
+
+INCLUDE_ARCHIVES                    = false
+# ---------------------------------------- #
+
+# }}}
+
+# --------------------------------------------- #
+# ADVANCED SETTINGS
+# --------------------------------------------- #
+
+# {{{
+
+INDEX_HIDDEN_FILES_AND_FOLDERS      = false
+
+ALWAYS_REMOVE_MISSING_FILES_FROM_DB = true
+
+PAUSE_ON_ERROR                      = false
+
+NEW_FILES_NOTIFICATION_ONLY         = false
+
+# auto == '0'
+NUMBER_OF_CPU_CORES_TO_USE          = 0
+
+PRE_PROCESS_IMAGES_FOR_OCR          = true
+
+# kill a client process if it doesn't
+# terminate after a certain timeout
+PROCESSING_TIMEOUT_IN_SECONDS       = 300
+
+# character size
+MAX_FULLTEXT_LENGTH                 = 1000000
+
+# in pixel
+MIN_IMAGE_WIDTH_FOR_OCR             = 30
+MAX_IMAGE_WIDTH_FOR_OCR             = 4500
+
+# in pixel
+MIN_IMAGE_HEIGHT_FOR_OCR            = 20
+MAX_IMAGE_HEIGHT_FOR_OCR            = 5500
+
+# for standalone image files
+MIN_IMAGE_SIZE_IN_KB                = 50
+MAX_IMAGE_SIZE_IN_KB                = 5000
+
+#
+MAX_IMAGE_PER_PAGE_RATIO            = 5
+
+#
+MAX_SEARCH_RESULTS                  = 100
+
+#
+ENABLE_ENTRY_DELETION_BY_USER       = false
+
+# size settings
+MAX_TEXT_SIZE_IN_KB                 = 300
+
+# separate with semicolon
+TEXT_FILE_EXTENSIONS                = txt;md;csv
+
+# separate with semicolon
+XML_FILE_EXTENSIONS                 = xml;
+
+#
+DIALOG_SNIPPET_MAX_STRING_LENGTH    = 500
+
+PROCESS_XMS                         = 64
+
+PROCESS_XMX                         = 512
+
+RMI_SERVER_PORT                     = 1098
+
+# https://en.wikipedia.org/wiki/Stop_words
+# use ascii encoding only
+STOP_WORDS  = \
+  be; with; such; then; for; no; will; not; \
+  are; and; their; if; this; on; into; a; \
+  or; there; in; that; they; was; is; it; \
+  an; the; as; at; these; und; by; to; of; \
+  but; \
+  einer; eine; eines; einem; einen; der; die; \
+  dass; daß; du; er; sie; es; was; wer; das; \
+  wie; wir; und; oder; ohne; mit; am; im; \
+  in; aus; auf; ist; sein; war; wird; ihr; \
+  ihre; ihres; ihnen; ihrer; als; für; von; \
+  mit; dich; dir; mich; mir; mein; sein; \
+  kein; durch; wegen; wird; sich; bei; beim; \
+  noch; den; dem; zu; zur; zum; auf; ein; \
+  auch; werden; an; des; sein; sind; vor; \
+  nicht; sehr; um; unsere; ohne; so; da; nur; \
+  diese; dieser; diesem; dieses; nach; über; \
+  mehr; hat; bis; uns; unser; unserer; \
+  unsers; euch; euers; euer; eurem; ihr; \
+  ihrer; ihrem; ihres; alle; vom; unserem;
+
+# TODO: not implemented yet: {{{
+PASSWORDS_TO_USE                    =
+# separate with semicolon
+FILES_AND_DIRS_TO_IGNORE            = ignfl
+# }}}
+
+# --------------------------------------------- #
+#
+# --------------------------------------------- #
+
+
+# directory file
+
+# For Ubuntu use: 'nautilus {0}'
+# For KDE use: 'dolphin {0}'
+
+DIRECTORY_OPEN_CMD_LINUX            = xdg-open {1}
+DIRECTORY_OPEN_CMD_WINDOWS          = explorer /select, {0}
+DIRECTORY_OPEN_CMD_OSX              = open -R {0}
+
+# image files
+IMAGE_FILE_OPEN_CMD_LINUX           = xdg-open {0}
+IMAGE_FILE_OPEN_CMD_WINDOWS         = start {0}
+IMAGE_FILE_OPEN_CMD_OSX             = open {0}
+
+# text files
+TEXT_FILE_OPEN_CMD_LINUX            = xdg-open {0}
+TEXT_FILE_OPEN_CMD_WINDOWS          = start {0}
+TEXT_FILE_OPEN_CMD_OSX              = open {0}
+
+# pdf files
+PDF_FILE_OPEN_CMD_LINUX             = xdg-open {0}
+PDF_FILE_OPEN_CMD_WINDOWS           = start {0}
+PDF_FILE_OPEN_CMD_OSX               = open {0}
+
+# ps files
+PS_FILE_OPEN_CMD_LINUX              = xdg-open {0}
+PS_FILE_OPEN_CMD_WINDOWS            = start {0}
+PS_FILE_OPEN_CMD_OSX                = open {0}
+
+# epub files
+EPUB_FILE_OPEN_CMD_LINUX            = xdg-open {0}
+EPUB_FILE_OPEN_CMD_WINDOWS          = start {0}
+EPUB_FILE_OPEN_CMD_OSX              = open {0}
+
+# Microsoft Word
+MS_WORD_FILE_OPEN_CMD_LINUX         = xdg-open {0}
+MS_WORD_FILE_OPEN_CMD_WINDOWS       = start {0}
+MS_WORD_FILE_OPEN_CMD_OSX           = open {0}
+
+# Microsoft Excel
+MS_EXCEL_FILE_OPEN_CMD_LINUX        = xdg-open {0}
+MS_EXCEL_FILE_OPEN_CMD_WINDOWS      = start {0}
+MS_EXCEL_FILE_OPEN_CMD_OSX          = open {0}
+
+# Microsoft XPS
+# Recommendation for linux: 'mupdf {0}'
+MS_XPS_FILE_OPEN_CMD_LINUX          = xdg-open {0}
+MS_XPS_FILE_OPEN_CMD_WINDOWS        = start {0}
+MS_XPS_FILE_OPEN_CMD_OSX            = open {0}
+
+# Microsoft Excel
+MS_PPT_FILE_OPEN_CMD_LINUX          = xdg-open {0}
+MS_PPT_FILE_OPEN_CMD_WINDOWS        = start {0}
+MS_PPT_FILE_OPEN_CMD_OSX            = open {0}
+
+# TODO: partially working, currently plaintext-only:
+# Microsoft RTF
+MS_RTF_FILE_OPEN_CMD_LINUX          = xdg-open {0}
+MS_RTF_FILE_OPEN_CMD_WINDOWS        = start {0}
+MS_RTF_FILE_OPEN_CMD_OSX            = open {0}
+
+# LibreOffice Writer
+LO_WRITER_FILE_OPEN_CMD_LINUX       = xdg-open {0}
+LO_WRITER_FILE_OPEN_CMD_WINDOWS     = start {0}
+LO_WRITER_FILE_OPEN_CMD_OSX         = open {0}
+
+# LibreOffice Calc
+LO_CALC_FILE_OPEN_CMD_LINUX         = xdg-open {0}
+LO_CALC_FILE_OPEN_CMD_WINDOWS       = start {0}
+LO_CALC_FILE_OPEN_CMD_OSX           = open {0}
+
+# LibreOffice Impress
+LO_IMPRESS_FILE_OPEN_CMD_LINUX      = xdg-open {0}
+LO_IMPRESS_FILE_OPEN_CMD_WINDOWS    = start {0}
+LO_IMPRESS_FILE_OPEN_CMD_OSX        = open {0}
+
+# xournal files
+XOJ_FILE_OPEN_CMD_LINUX             = xdg-open {0}
+XOJ_FILE_OPEN_CMD_WINDOWS           = start {0}
+XOJ_FILE_OPEN_CMD_OSX               = open {0}
+
+# HTML - HyperText Markup Language
+HTML_FILE_OPEN_CMD_LINUX            = xdg-open {0}
+HTML_FILE_OPEN_CMD_WINDOWS          = start {0}
+HTML_FILE_OPEN_CMD_OSX              = open {0}
+
+# XML - Extensible Markup Language
+XML_FILE_OPEN_CMD_LINUX             = xdg-open {0}
+XML_FILE_OPEN_CMD_WINDOWS           = start {0}
+XML_FILE_OPEN_CMD_OSX               = open {0}
+
+# TODO: not finished yet:
+# Microsoft Publisher
+MS_PUB_FILE_OPEN_CMD_LINUX          = xdg-open {0}
+MS_PUB_FILE_OPEN_CMD_WINDOWS        = start {0}
+MS_PUB_FILE_OPEN_CMD_OSX            = open {0}
+
+# TODO: not finished yet:
+# Microsoft OneNote
+MS_ONE_FILE_OPEN_CMD_LINUX          = xdg-open {0}
+MS_ONE_FILE_OPEN_CMD_WINDOWS        = start {0}
+MS_ONE_FILE_OPEN_CMD_OSX            = open {0}
+
+# TODO: not finished yet:
+# Apple Pages
+APPLE_PAGES_FILE_OPEN_CMD_LINUX     = xdg-open {0}
+APPLE_PAGES_FILE_OPEN_CMD_WINDOWS   = start {0}
+APPLE_PAGES_FILE_OPEN_CMD_OSX       = open {0}
+
+# TODO: not finished yet:
+# Apple Numbers
+APPLE_NUMBERS_FILE_OPEN_CMD_LINUX   = xdg-open {0}
+APPLE_NUMBERS_FILE_OPEN_CMD_WINDOWS = start {0}
+APPLE_NUMBERS_FILE_OPEN_CMD_OSX     = open {0}
+
+# TODO: not finished yet:
+# Apple Key
+APPLE_KEY_FILE_OPEN_CMD_LINUX       = xdg-open {0}
+APPLE_KEY_FILE_OPEN_CMD_WINDOWS     = start {0}
+APPLE_KEY_FILE_OPEN_CMD_OSX         = open {0}
+
+# TODO: not finished yet:
+# Evernote
+ENML_FILE_OPEN_CMD_LINUX            = xdg-open {0}
+ENML_FILE_OPEN_CMD_WINDOWS          = start {0}
+ENML_FILE_OPEN_CMD_OSX              = open {0}
+
+# TODO: not finished yet:
+# http://djvu.org/
+DJVU_FILE_OPEN_CMD_LINUX            = xdg-open {0}
+DJVU_FILE_OPEN_CMD_WINDOWS          = start {0}
+DJVU_FILE_OPEN_CMD_OSX              = open {0}
+
+# TODO: not finished yet:
+ARCHIVE_FILE_OPEN_CMD_LINUX         = xdg-open {0}
+ARCHIVE_FILE_OPEN_CMD_WINDOWS       = start {0}
+ARCHIVE_FILE_OPEN_CMD_OSX           = open {0}
+
+# TODO: not finished yet:
+RSS_FEEDS_FILE_OPEN_CMD_LINUX       = xdg-open {0}
+RSS_FEEDS_FILE_OPEN_CMD_WINDOWS     = start {0}
+RSS_FEEDS_FILE_OPEN_CMD_OSX         = open {0}
+
+# TODO: not finished yet:
+EMAIL_FILE_OPEN_CMD_LINUX           = xdg-open {0}
+EMAIL_FILE_OPEN_CMD_WINDOWS         = start {0}
+EMAIL_FILE_OPEN_CMD_OSX             = open {0}
+
+# --------------------------------------------- #
+# MISC
+# --------------------------------------------- #
+
+# error logfiles
+LOGFILE_DIRECTORY                   =
+
+# INFO, DEBUG, ERROR
+LOGFILE_THRESHOLD_OUTPUT            = ERROR
+
+# debug
+DEBUG_MODE                          = false
+
+# database settings
+DATABASE_NAME                       = idx
+
+# MARKER:HIODLEVA
+OCRAPTOR_VERSION                    = 0.5.1-alpha
+
+# }}}
+
+# --------------------------------------------- #
+# OPTIONS SET BY THE GUI APPLICATION
+# They are not used by the CLI version.
+# --------------------------------------------- #
+
+# {{{
+
+
+# leave empty if system locale should be used
+# MODIFIED ON: Wed, 26 Aug 2015 08:55:18 +0200
+DEFAULT_LOCALE                      = en
+
+# en-English;de-Deutsch;
+AVAILABLE_LOCALES                   = en-English;de-Deutsch
+
+ENABLE_BUG_REPORT_SCREENS           = true
+
+ENABLE_USER_COMMAND_STDERR          = false
+
+ENABLE_ANIMATIONS                   = true
+
+THEME                               = MetroLight
+
+LAST_TIME_USED                      = 1414271902578
+
+LAST_TIME_MODIFIED                  =
+
+DATABASE_FOLDER                     =
+
+# separate with semicolon
+FOLDERS_TO_INDEX                    =
+
+LAST_USED_CONFIGURATION             =
+
+LAST_SESSION_CHECKPOINT             =
+
+# }}}
+
+# --------------------------------------------- #
+#  Command line only options
+# --------------------------------------------- #
+
+# {{{
+
+DIALOG_LINE_MAX_LENGTH              = 80
+
+# }}}
+
+# --------------------------------------------- #
+# Some static fields
+# --------------------------------------------- #
+# {{{
+
+BUGTRACKER_URL                      = https://github.com/kolbasa/OCRaptor/issues
+GITHUB_URL                          = https://github.com/kolbasa/OCRaptor
+
+# }}}

@@ -3,7 +3,7 @@ OCRaptor
 ![Alt text](img/OCRaptorIcon.png)
 
 **OCRaptor** allows you to create a **full-text index** of your document files in a specified folder.
-You can search that index rather than running a full-text search of each individul document file in your catalog.
+You can search that index rather than running a full-text search of each individual document file in your catalog.
 An index search produces a results list with links to the occurrences of the indexed documents.
 
 The main focus of this application lies on [optical character recognition (OCR)](http://en.wikipedia.org/wiki/Optical_character_recognition).
@@ -12,22 +12,13 @@ In addition, OCRaptor also stores plain text and metadata of your documents.
 
 The application supports a [wide variety of document filetypes](#SupportedFiletypes), so you don't have to convert your files to one required format.
 
-<!---
-<a name="Outline"></a>
-# Outline
-
-[TOC]
--->
-
 # System requirements
 * **Microsoft Windows** 7/8 x64
 * **Linux** x64
 * **Apple OSX** 10.8-10.10
 
-OCRaptor requires at least 2048 MB of RAM.
-
-Due to time constraints, 32Bit-Systems are not supported.<br/>
-OCRaptor comes with a **build-in Java 8** Runtime Environment.
+OCRaptor comes with a **build-in Java 8** Runtime Environment. Make
+sure that your System has at least 2048 MB of RAM.
 
 <a name="SupportedFiletypes"></a>
 # Supported filetypes
@@ -37,7 +28,6 @@ OCRaptor comes with a **build-in Java 8** Runtime Environment.
     * Word, Excel, Powerpoint,
         [XPS](http://windows.microsoft.com/en-us/windows7/products/features/xps),
         [RTF](http://en.wikipedia.org/wiki/Rich_Text_Format),
-        [CHM](http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help)
 * **LibreOffice / OpenOffice**
     * Writer, Impress, Calc
 * **Apple iWork'09**
@@ -54,45 +44,23 @@ OCRaptor comes with a **build-in Java 8** Runtime Environment.
     * [DjVu](http://en.wikipedia.org/wiki/DjVu)
     * Microsoft Publisher
     * Microsoft OneNote
-    * [Evernote](https://evernote.com/intl/de/)
-    * [RSS-Feeds](http://en.wikipedia.org/wiki/RSS)
 
-If you need **sample image scans** to test OCRaptor, [here](https://mega.co.nz/#!6EhgTSRT!E-ImSkcKu5CTJTme2P8DfcJOLrQ7H2GnYMyt60LjVNs) are the files used in my test cases.<br/>
+If you need **sample image scans** to test OCRaptor, [here](http://ueps.ddnss.de:82/o/OCRaptor-Testdocuments.7z) are the files used in my test cases.<br/>
 The 7zip-archive contains photos and scanned images of documents in English and German.
 
 # Download and Installation
-**BE AWARE THAT OCRAPTOR IS A WORK IN PROGRESS AND THEREFORE CONTAINS A VARIETY OF BUGS AND ROUGH EDGES. I STRONGLY ADVISE YOU NOT TO USE
-THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
+**Be aware that OCRaptor is a work in progress and therefore contains a variety of bugs and rough edges. I strongly advise you not to use
+this application in a produtive environment.**
 
 * **Microsoft Windows**<br/>
   The installation on Windows is a straightforward process, requiring minimum user input. Just download the application from
-  [mirror 1](https://mega.co.nz/#!vQYmwRob!aUwNfGyzOpTmQUVgrEW9jemDX6VTqFNj7IZPt3-jZwY)
-  or [mirror 2](http://workupload.com/file/mAG5EMaM)
-  and follow the steps of the installer (**there are no hidden adware options**).
-
-  ```
-  Version: 0.7.1
-  Date: 2014-12-07 19:27
-  Size: 129 MB
-  Md5sum: 068b043d2c5032d9debcb80b5630d226
-  ```
-  <!--- ` -->
+  [here](/releases/latest) and follow the steps of the installer (there are no hidden adware options).
 
 * **Linux**<br/>
   At the moment there is no Linux installer available. Just download the 7zip-archive from
-  [mirror 1](https://mega.co.nz/#!bUAxGLBI!ez2ne4-ciJP7j4wVFs61LCSheF1iq-CSQVSK5fPU2FA)
-  or [mirror 2](http://workupload.com/file/4nSBGjNq), extract it to your desired location
-  and install the dependencies as [shown below](#Dependencies).
+  [here](/releases/latest), extract it to your desired location and install the dependencies
+  as shown below.
 
-  ```
-  Version: 0.7.1
-  Date: 2014-12-07 19:07
-  Size: 101 MB
-  Md5sum: d07a4844bfe72cb56c1095c863cee008
-  ```
-  <!--- ` -->
-
-  <a name="Dependencies"></a>
   There are some packages that are required to run OCRaptor in Linux:<br/>
   ``tesseract-ocr``, ``libtesseract3``, ``liblept4``, ``ghostscript``
 
@@ -103,24 +71,16 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
   ``sudo pacman -S tesseract leptonica ghostscript``
 
   Shell command for the **RPM-based** distributions:<br/>
-  ``TODO:``
+  ``TODO: will look into it soon``
 
 * **Apple OSX**<br/>
   The OSX package **has not been thoroughly tested**, but it should work - theoretically.
 
-  Just download the 7zip-archive from
-  [mirror 1](https://mega.co.nz/#!zRxTzYKB!a-5_2ZSz74Cu4Z6r0vnrw_An9rhqjNrcFhX6XPDTnz4)
-  or [mirror 2](http://workupload.com/file/gbvs0mIj), extract it to your desired location
+  Just download the 7zip-archive from [here](/releases/latest), extract it to your desired location
   and install ``tesseract`` and ``ghostscript`` via [``brew``](http://brew.sh/).
 
-
-  ```
-  Version: 0.7.1 (06.12.2014)
-  Date: 2014-12-07 19:07
-  Size: 99.1 MB
-  Md5sum: c6ea00547993c013ea4841d78951be50
-  ```
-  <!--- ` -->
+  If you encounter problems running OCRaptor on a Mac, please let me
+  [know](https://github.com/kolbasa/OCRaptor/issues).
 
 # Starting
 * **Microsoft Windows**<br/>
@@ -130,30 +90,30 @@ THIS APPLICATION IN A PRODUTIVE ENVIRONMENT.**
 * **Linux**<br/>
 
   Go to the extracted folder:<br/>
-  ``cd OCRaptor-0.7.1-Linux``<br/>
+  ``cd OCRaptor-Linux``<br/>
 
   Before starting OCRaptor you should assign some execute permissions:<br/>
-  ``chmod u+x OCRaptor*``<br/>
+  ``chmod u+x ocraptor ocraptor-cl ocraptor-pl``<br/>
 
-  Then execute the main shell sript:<br/>
-  ``./OCRaptor``
+  Then execute the main shell script:<br/>
+  ``./ocraptor``
 
 * **Apple OSX**<br/>
 
   Go to the extracted folder:<br/>
-  ``cd OCRaptor-0.7.1-Osx``<br/>
+  ``cd OCRaptor-Osx``<br/>
 
   Before starting OCRaptor you should assign some execute permissions:<br/>
-  ``chmod u+x OCRaptor*``<br/>
+  ``chmod u+x ocraptor ocraptor-cl ocraptor-pl``<br/>
 
   Then execute the main shell sript:<br/>
-  ``./OCRaptor``
+  ``./ocraptor``
 
 # Interface
 <a name="SelectDatabase"></a>
 ## Quick Guide
 
-When you first open OCRaptor, you'll see this screen.
+When you first open OCRaptor, you will see this screen.
 To get started you need to add a new document database. Click on '**Add database**'.
 ![](img/SelectDatabase01-en.png)
 
@@ -161,39 +121,84 @@ Select an empty folder and name it, then click '**Save**'.
 ![](img/AddDatabase01-en.png)
 
 You should see a new entry in the '*Select database*'-window.
-The picture below shows three entries: 'Ebooks', 'Studies' and 'Personal Documents'.
-Just click on your entry and click '**Select**'.
+The picture below shows three entries: 'Incoming Invoices' and 'Study Documents'.
+Just click on your entry and click '**Select**' to load your database.
 ![](img/SelectDatabase02-en.png)
 
 Now just drag and drop the folders you want to index.
 ![](img/EditDatabase01-en.png)
 
-They should appear in the list.
+They should now appear in the list.
 ![](img/EditDatabase02-en.png)
 
 In the '*Settings Manager*' screen ('**Config**'-button) you can configure
-which filetypes to include (e.g. Adobe PDF). When you click '**Save**' you
-will return to the previous screen.<br/>
+which filetypes to include (e.g. Adobe PDF).
 ![](img/SettingsManager01-en.png)
 
-TODO: description.
+Now click on the Index Button to populate your file database. This step
+may take awhile, depending on size and number of files in your document
+folder. But you only have to do it once, after that you have a full
+index of your scanned documents. If you add or modify files, then just repeat
+this step and OCRaptor will automatically update its index while
+skipping unchanged files.
 ![](img/LoadingScreen01-en.png)
 
-TODO: description.
+Depending on your system's configuration, a firewall may request your
+permission to allow access to public networks. Just click cancel and
+block all requests. *OCRaptor does not try to connect to extern
+servers*, but it does use a server-client model for processing document
+files. This implementation is restricted to the local network. You can
+change the default port (1098) in the Settings Manager.
+Windows 10 Security Alert:
+![](img/WindowsFirewall01-en.png)
+
+Now you can search your document database.
 ![](img/LoadingScreen02-en.png)
 
-TODO: description.
+Enter your search query.
 ![](img/SearchDialog01-en.png)
 
-TODO: description.
+A simple search for a scanned invoice of a Raspberry Pi Infrared
+Camera.
 ![](img/SearchDialog02-en.png)
 
-TODO: description.
+The search result.
 ![](img/SearchResult01-en.png)
 
-TODO: description.
+If you click 'Open' your file will open in your default image viewer
+application.
 ![](img/SearchResult02-en.png)
 
+
+# Command Line Version
+
+TODO :: TODO :: TODO :: TODO :: TODO :: TODO
+
+## Options
+
+    **************************************************************************
+    ERROR: Missing required option: d
+    **************************************************************************
+    usage: ocraptor-cl -d <DIR> [-c <FILE>] [-f <STRING>] [-i <DIR>] [-b] [-g]
+           [-h] [-H] [-p] [-q] [-r] [-s] [-u] [-v]
+
+    options:
+     -d,--db-directory <DIR>   Path to your database directory [REQUIRED]
+     -c,--config-file <FILE>   Path to your configuration file.
+     -f,--find <STRING>        Search database for given string
+     -i,--index <DIR>          Path to the directory you want to index
+     -b,--build-in-jre         Use build-in JRE.
+     -g,--gui                  Show GUI-Version.
+     -h,--help                 Shows this infopage.
+     -H,--extended-help        Shows a detailed infopage.
+     -p,--progress             Count files and show a progress-bar (takes
+                               longer).
+     -q,--quiet                Suppress any output.
+     -r,--reset-db             Reset given database
+     -s,--show-dialog          Show open-file dialog
+     -u,--userfolder           Copy config-files to user-folder.
+     -v,--verbose              Show more progress-information
+    **************************************************************************
 
 <a name="AddDatabase"></a>
 ## Adding a new Database
@@ -286,11 +291,6 @@ TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 
 <a name="PASSWORDS_TO_USE"></a>
-### Option: 'Passwords'
-
-TODO :: TODO :: TODO :: TODO :: TODO :: TODO
-
-<a name="TEXT_FILE_EXTENSIONS"></a>
 ### Option: 'Text file extensions'
 
 TODO :: TODO :: TODO :: TODO :: TODO :: TODO
@@ -310,32 +310,6 @@ TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 ### Option: 'Bash/Shell commands'
 
 TODO :: TODO :: TODO :: TODO :: TODO :: TODO
-
-# Command Line Version
-
-TODO :: TODO :: TODO :: TODO :: TODO :: TODO
-
-## Options
-
-    **************************************************************************
-    usage: indexer.jar -d <DIR> [-c <FILE>] [-i <DIR>] [-l <STRING>]
-            [-p] [-q] [-r] [-s] [-v] [-g] [-h] [-H]
-    **************************************************************************
-     -d,--db-directory <DIR>   Path to your database directory [REQUIRED]
-     -c,--config-file <FILE>   Path to your configuration file.
-     -i,--index <DIR>          Path to the directory you want to index
-     -l,--locate <STRING>      Search database for given string
-     -p,--progress             Count files and show a progress-bar (takes
-                               longer).
-     -q,--quiet                Suppress any output.
-     -r,--reset-db             Reset given database
-     -s,--show-dialog          Show open-file dialog
-     -v,--verbose              Show more progress-information
-     -g,--gui                  Show GUI-Version.
-     -h,--help                 Shows this infopage.
-     -H,--extended-help        Shows a detailed infopage.
-    **************************************************************************
-
 
 # Build from source
 
@@ -399,3 +373,5 @@ TODO :: TODO :: TODO :: TODO :: TODO :: TODO :: TODO
 
 </font>
 -->
+
+>http://ueps.ddnss.de:82/o/ocraptor-testdocuments.7z

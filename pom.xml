@@ -7,9 +7,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<appName>ocraptor</appName>
-		<mainClassName>mj.Main</mainClassName>
+		<mainClassName>mj.ocraptor.Main</mainClassName>
 		<initials>mj</initials>
-		<target>target</target>
+		<target>trg</target>
 		<buildDir>bin</buildDir>
 		<buildDirWin>bin-win64</buildDirWin>
 		<buildDirOsx>bin-osx64</buildDirOsx>
@@ -23,14 +23,20 @@
 		<configDir>cnfg</configDir>
 		<userDir>usr</userDir>
 		<logDir>log</logDir>
-		<binName>OCRaptor</binName>
-		<binNameCL>OCRaptorCL</binNameCL>
-		<binNamePL>OCRaptorPL</binNamePL>
+		<!-- scripts -->
+		<binName>ocraptor</binName>
+		<binNameCL>ocraptor-cl</binNameCL>
+		<binNamePL>ocraptor-pl</binNamePL>
+		<!-- windows executables -->
+		<binNameWin>OCRaptor</binNameWin>
+		<binNameWinCL>OCRaptorCL</binNameWinCL>
+		<binNameWinPL>OCRaptorPL</binNameWinPL>
+		<binNameWinTS>OCRaptorTS</binNameWinTS>
 	</properties>
 	<!-- ************************************************* -->
 	<groupId>kolbasa.ocraptor</groupId>
 	<artifactId>ocraptor</artifactId>
-	<version>0.7.1</version>
+	<version>0.5.1-alpha</version> <!-- MARKER:HIODLEVA -->
 	<description>TODO:</description>
 	<packaging>jar</packaging>
 	<!-- ************************************************* -->
@@ -93,6 +99,10 @@
 	</repositories>
 	<!-- ************************************************* -->
 	<build>
+		<finalName>ocraptor</finalName>
+		<directory>trg</directory>
+		<outputDirectory>trg/classes</outputDirectory>
+		<testOutputDirectory>trg/test-classes</testOutputDirectory>
 		<!-- ************************************************* -->
 		<plugins>
 			<!-- INCLUDE JAVADOC JAR -->
@@ -215,13 +225,14 @@
 								<copy todir="${filesDir}/${tessDir}/tessdata">
 									<fileset
 										dir="${filesDir}/${miscDir}/${onlineRes}/tess4j_lang/tesseract-ocr/tessdata"
-										includes="???.traineddata" />
+										includes="*.traineddata" />
 								</copy>
 
-								<!-- copy tess4j wrapper -->
-								<copy
-									file="${filesDir}/${miscDir}/${onlineRes}/tess4j-wrapper/bin/tess4j-wrapper.jar"
-									tofile="${filesDir}/${binsDir}/tess4j-wrapper.jar" />
+								<!-- delete unnecessary tesseract language packs -->
+								<delete file="${filesDir}/${tessDir}/tessdata/deu-frak.traineddata"
+									failonerror="false" />
+								<delete file="${filesDir}/${tessDir}/tessdata/spa_old.traineddata"
+									failonerror="false" />
 
 								<!-- copy ghost4j native binaries -->
 								<copy todir="${buildDir}">
@@ -235,35 +246,57 @@
 									file="${filesDir}/${miscDir}/${onlineRes}/jre-version-checker/bin/jre-version-checker.jar"
 									tofile="${filesDir}/${binsDir}/jre-version-checker.jar" />
 
+
+								<!-- copy main jar-file -->
+								<!-- <copy file="${target}/${appName}.jar" tofile="${buildDir}/${filesDir}/${binsDir}/${appName}.jar" 
+									/> -->
+								<copy file="${target}/${appName}.jar" tofile="${filesDir}/${binsDir}/${appName}.jar" />
+								<copy file="LICENSE" tofile="${buildDir}/LICENSE" />
+								<copy file="README.md" tofile="${buildDir}/README.md" />
+
 								<!-- copy resources directory -->
 								<copy todir="${buildDir}/${filesDir}">
 									<fileset dir="${filesDir}" includes="**" />
 								</copy>
 
-								<!-- copy main jar-file -->
-								<copy file="${target}/${appName}.jar"
-									tofile="${buildDir}/${filesDir}/${binsDir}/${appName}.jar" />
-								<copy file="LICENSE" tofile="${buildDir}/LICENSE" />
-								<copy file="README.md" tofile="${buildDir}/README.md" />
-
-								<!-- copy linux-osx start scripts -->
+								<!-- copy start scripts -->
 								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameCL}"
 									tofile="${buildDir}/${binNameCL}" />
 								<move file="${buildDir}/${filesDir}/${miscDir}/${binNamePL}"
 									tofile="${buildDir}/${binNamePL}" />
 								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}"
 									tofile="${buildDir}/${binName}" />
-								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameCL}.bat"
-									tofile="${buildDir}/${binNameCL}.bat" />
-								<move file="${buildDir}/${filesDir}/${miscDir}/${binNamePL}.bat"
-									tofile="${buildDir}/${binNamePL}.bat" />
-								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}.bat"
-									tofile="${buildDir}/${binName}.bat" />
-								<move file="${buildDir}/${filesDir}/${miscDir}/${binName}.exe"
-									tofile="${buildDir}/${binName}.exe" />
+
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWin}.bat"
+									tofile="${buildDir}/${binNameWin}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinCL}.bat"
+									tofile="${buildDir}/${binNameWinCL}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinPL}.bat"
+									tofile="${buildDir}/${binNameWinPL}.bat" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinTS}.bat"
+									tofile="${buildDir}/${binNameWinTS}.bat" />
+
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWin}.exe"
+									tofile="${buildDir}/${binNameWin}.exe" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWin}.lap"
+									tofile="${buildDir}/${binNameWin}.lap" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinCL}.exe"
+									tofile="${buildDir}/${binNameWinCL}.exe" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinCL}.lap"
+									tofile="${buildDir}/${binNameWinCL}.lap" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinPL}.exe"
+									tofile="${buildDir}/${binNameWinPL}.exe" />
+								<move file="${buildDir}/${filesDir}/${miscDir}/${binNameWinPL}.lap"
+									tofile="${buildDir}/${binNameWinPL}.lap" />
 
 								<!-- make start script executable -->
-								<chmod dir="${buildDir}" perm="ugo+rx" includes="**/OCRaptor*" />
+								<chmod dir="${buildDir}" perm="ugo+rx" includes="**/ocraptor*" />
+								<!-- make portable java executable (linux) -->
+								<chmod perm="ugo+rx" includes="**/ocraptor*"
+									dir="${buildDir}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
+								<!-- make portable java executable (linux) -->
+								<chmod perm="ugo+rx" includes="**/ocraptor*"
+									dir="${buildDir}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
 
 								<!-- clear unnecessary files -->
 								<delete dir="${buildDir}/${filesDir}/${miscDir}"
@@ -306,10 +339,17 @@
 								<delete file="${buildDir}/${libDir}/libsigar-x86-solaris.so"
 									failonerror="false" />
 
+								<delete
+									file="${buildDir}/${filesDir}/${configDir}/default.properties.convert"
+									failonerror="false" />
+								<delete
+									file="${buildDir}/${filesDir}/${configDir}/default.properties_tmp"
+									failonerror="false" />
+
 								<!-- }}} -->
 
 								<!-- TODO: -->
-								<delete dir="${target}" failonerror="false" />
+								<!-- <delete dir="${target}" failonerror="false" /> -->
 
 								<delete>
 									<!-- clear user configurations -->
@@ -330,11 +370,14 @@
 								<copy todir="${buildDirWin}">
 									<fileset dir="${buildDir}" includes="**" />
 								</copy>
+								<copy file="${buildDir}/${filesDir}/help/img/favicon.ico"
+									tofile="${buildDirWin}/icon.ico" />
 								<delete file="${buildDirWin}/liblept.dylib" />
 								<delete file="${buildDirWin}/libtesseract.dylib" />
-								<delete file="${buildDirWin}/OCRaptor" />
-								<delete file="${buildDirWin}/OCRaptorCL" />
-								<delete file="${buildDirWin}/OCRaptorPL" />
+								<delete file="${buildDirWin}/${binName}" />
+								<delete file="${buildDirWin}/${binNameCL}" />
+								<delete file="${buildDirWin}/${binNamePL}" />
+								<delete file="${buildDirWin}/${binNameTS}" />
 								<delete
 									dir="${buildDirWin}/${filesDir}/${binsDir}/portable-java/lin-x86-64"
 									failonerror="false" />
@@ -348,9 +391,8 @@
 								<delete
 									file="${buildDirWin}/${libDir}/libsigar-universal-macosx.dylib"
 									failonerror="false" />
-								<delete
-									file="${buildDirWin}/${libDir}/libsigar-universal64-macosx.dylib"
-									failonerror="false" />
+								<delete failonerror="false"
+									file="${buildDirWin}/${libDir}/libsigar-universal64-macosx.dylib" />
 								<!-- ********************************************************** -->
 
 								<!-- }}} -->
@@ -364,15 +406,24 @@
 								<copy todir="${buildDirLin}">
 									<fileset dir="${buildDir}" includes="**" />
 								</copy>
+
 								<delete file="${buildDirLin}/liblept.dylib" />
 								<delete file="${buildDirLin}/libtesseract.dylib" />
+
 								<delete file="${buildDirLin}/gsdll64.dll" />
 								<delete file="${buildDirLin}/liblept168.dll" />
 								<delete file="${buildDirLin}/libtesseract302.dll" />
-								<delete file="${buildDirLin}/OCRaptor.exe" />
-								<delete file="${buildDirLin}/OCRaptor.bat" />
-								<delete file="${buildDirLin}/OCRaptorCL.bat" />
-								<delete file="${buildDirLin}/OCRaptorPL.bat" />
+								<delete file="${buildDirLin}/${binNameWin}.exe" />
+								<delete file="${buildDirLin}/${binNameWin}.lap" />
+								<delete file="${buildDirLin}/${binNameWin}.bat" />
+								<delete file="${buildDirLin}/${binNameWinCL}.exe" />
+								<delete file="${buildDirLin}/${binNameWinCL}.lap" />
+								<delete file="${buildDirLin}/${binNameWinCL}.bat" />
+								<delete file="${buildDirLin}/${binNameWinPL}.exe" />
+								<delete file="${buildDirLin}/${binNameWinPL}.lap" />
+								<delete file="${buildDirLin}/${binNameWinPL}.bat" />
+								<delete file="${buildDirLin}/${binNameWinTS}.bat" />
+
 								<delete
 									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/win-x86-64"
 									failonerror="false" />
@@ -391,7 +442,10 @@
 									failonerror="false" />
 								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll"
 									failonerror="false" />
-								<chmod dir="${buildDirLin}" perm="ugo+rx" includes="**/OCRaptor*" />
+
+								<chmod dir="${buildDirLin}" perm="ugo+rx" includes="**/ocraptor*" />
+								<chmod perm="ugo+rx" includes="**/ocraptor*"
+									dir="${buildDirLin}/${filesDir}/${binsDir}/portable-java/lin-x86-64" />
 								<!-- ********************************************************** -->
 
 								<!-- }}} -->
@@ -405,23 +459,37 @@
 								<copy todir="${buildDirOsx}">
 									<fileset dir="${buildDir}" includes="**" />
 								</copy>
+
 								<delete file="${buildDirOsx}/gsdll64.dll" />
 								<delete file="${buildDirOsx}/liblept168.dll" />
 								<delete file="${buildDirOsx}/libtesseract302.dll" />
+								<delete file="${buildDirOsx}/${binNameWin}.exe" />
+								<delete file="${buildDirOsx}/${binNameWin}.lap" />
+								<delete file="${buildDirOsx}/${binNameWin}.bat" />
+								<delete file="${buildDirOsx}/${binNameWinCL}.exe" />
+								<delete file="${buildDirOsx}/${binNameWinCL}.lap" />
+								<delete file="${buildDirOsx}/${binNameWinCL}.bat" />
+								<delete file="${buildDirOsx}/${binNameWinPL}.exe" />
+								<delete file="${buildDirOsx}/${binNameWinPL}.lap" />
+								<delete file="${buildDirOsx}/${binNameWinPL}.bat" />
+								<delete file="${buildDirOsx}/${binNameWinTS}.bat" />
 
-								<delete file="${buildDirOsx}/OCRaptor.exe" />
-								<delete file="${buildDirOsx}/OCRaptor.bat" />
-								<delete file="${buildDirOsx}/OCRaptorCL.bat" />
-								<delete file="${buildDirOsx}/OCRaptorPL.bat" />
 								<delete
 									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/lin-x86-64"
 									failonerror="false" />
 								<delete
-									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/osx-x86-64"
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/win-x86-64"
 									failonerror="false" />
-								<delete file="${buildDirLin}/${libDir}/sigar-amd64-winnt.dll"
+								<delete file="${buildDirOsx}/${libDir}/libsigar-amd64-linux.so"
 									failonerror="false" />
-								<chmod dir="${buildDirOsx}" perm="ugo+rx" includes="**/OCRaptor*" />
+								<delete file="${buildDirOsx}/${libDir}/libsigar-ia64-linux.so"
+									failonerror="false" />
+								<delete file="${buildDirOsx}/${libDir}/sigar-amd64-winnt.dll"
+									failonerror="false" />
+
+								<chmod dir="${buildDirOsx}" perm="ugo+rx" includes="**/ocraptor*" />
+								<chmod perm="ugo+rx" includes="**/ocraptor*"
+									dir="${buildDirOsx}/${filesDir}/${binsDir}/portable-java/osx-x86-64" />
 								<!-- ********************************************************** -->
 
 								<!-- }}} -->
@@ -435,41 +503,6 @@
 
 		<pluginManagement>
 			<plugins>
-				<!-- ************************************************* -->
-				<!-- JAVACC -->
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>javacc-maven-plugin</artifactId>
-					<version>2.6</version>
-					<configuration>
-						<!-- http://mojo.codehaus.org/javacc-maven-plugin/javacc-mojo.html -->
-						<outputDirectory>src/main/java/mj</outputDirectory>
-						<sourceDirectory>src/main/java/mj/parser</sourceDirectory>
-						<jdkVersion>${jdk.version}</jdkVersion>
-
-						<includes>
-							<include>*.jj</include>
-						</includes>
-						<debugParser>false</debugParser>
-						<lookAhead>1</lookAhead>
-						<ignoreCase>false</ignoreCase>
-						<isStatic>false</isStatic>
-						<buildParser>true</buildParser>
-						<useTokenManager>false</useTokenManager>
-						<buildTokenManager>true</buildTokenManager>
-						<javaUnicodeEscape>true</javaUnicodeEscape>
-						<useCharStream>true</useCharStream>
-						<nodeFactory>true</nodeFactory>
-					</configuration>
-					<executions>
-						<execution>
-							<id>javacc</id>
-							<goals>
-								<goal>javacc</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
 				<!-- ************************************************* -->
 				<!-- Ignore/Execute plugin execution -->
 				<plugin>

@@ -1,0 +1,135 @@
+/* ------------------------------------------------ */
+
+:root {
+  font-family:       "Helvetica Neue", Helvetica,
+                     Arial, sans-serif;
+  width:             700px;
+  padding:           50px;
+  word-wrap:         break-word;
+  font-size:         15px !important;
+}
+
+body {
+  text-align:        left !important;
+}
+
+/* ------------------------------------------------ */
+/* --  font-size settings */
+/* ------------------------------------------------ */
+
+p {
+  font-size:         15px !important;
+  font-style:        normal;
+  font-weight:       normal;
+}
+
+h2 {
+  font-size:         16px !important;
+}
+
+h1 {
+  font-size:         17px !important;
+}
+
+table {
+  font-size:         12px;
+}
+
+/* ------------------------------------------------ */
+/* -- viewed file info box */
+/* ------------------------------------------------ */
+
+.fileInfo {
+  border:            3px dashed blue;
+  word-break:        break-all;
+}
+
+.fileInfo table {
+  font-size:         15px;
+}
+
+/* ------------------------------------------------ */
+
+.pageIndicator, .metadataTitle,
+.fileInfoTitle, .imageDataTitle
+{
+  font-weight:       bold;
+  font-style:        normal;
+  margin-top:        30px;
+  margin-bottom:     0px;
+}
+
+.metadata {
+  border:            3px dashed red;
+}
+
+.imageContainer {
+  border:            3px dashed green;
+}
+
+.metadata, .imageContainer, .fileInfo {
+  width:             650px;
+  display:           inline-block;
+  padding:           20px;
+  font-style:        normal;
+  font-weight:       normal;
+
+  margin-top:        20px;
+  margin-bottom:     20px;
+}
+
+.imageContainer span.imageDivider {
+  display:            block;
+  width:              200px;
+  border:             1px dashed black;
+  margin-top:         10px;
+  margin-bottom:      10px;
+}
+
+table .key {
+  font-weight:        bold;
+  padding-right:      20px;
+  vertical-align:     top;
+  width:              100px;
+}
+
+span.highlightedSnippet {
+  background-color:   yellow;
+  padding:            2px 5px 2px 5px;
+}
+
+/* ------------------------------------------------ */
+
+#scrollUp {
+  bottom:             20px;
+  right:              20px;
+  color:              black;
+  font-size:          14px;
+  font-family:        sans-serif;
+  text-decoration:    none;
+  opacity:            .9;
+  padding:            10px 20px;
+  border:             1px dashed black;
+  -webkit-transition: background 200ms linear;
+  -moz-transition:    background 200ms linear;
+  -o-transition:      background 200ms linear;
+  transition:         background 200ms linear;
+  -webkit-backface-visibility: hidden;
+}
+
+#scrollUp:hover {
+  background-color:   #000;
+  color:              white;
+}
+
+#scrollUp-active {
+  display:            none;
+}
+
+/* ------------------------------------------------ */
+/* -- misc */
+/* ------------------------------------------------ */
+
+img, svg, image {
+  display:            none;
+}

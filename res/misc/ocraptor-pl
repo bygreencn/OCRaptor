@@ -1,0 +1,2 @@
+#!/bin/bash
+./ocraptor-cl --gui --build-in-jre 

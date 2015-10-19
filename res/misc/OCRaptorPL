@@ -1,2 +1,0 @@
-#!/bin/bash
-./OCRaptorCL --gui --build-in-jre 

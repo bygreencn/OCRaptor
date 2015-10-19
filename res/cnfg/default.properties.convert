@@ -1,0 +1,2 @@
+#!/bin/bash
+native2ascii default.properties_tmp default.properties

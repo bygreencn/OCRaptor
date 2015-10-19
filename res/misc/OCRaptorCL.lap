@@ -1,0 +1,27 @@
+# janel settings
+
+-DJAVA_HOME=res/bins/portable-java/win-x86-64/
+-Djava.class.path=res/bins/ocraptor.jar
+-Dfile.encoding=UTF-8
+
+janel.jvm.path=res/bins/portable-java/win-x86-64/bin/server/jvm.dll
+janel.java.home.path=res/bins/portable-java/win-x86-64/
+janel.main.class=mj.ocraptor.Main
+janel.classpath.jars.dir=lib
+janel.library.path.dir=lib
+
+janel.main.argument=--build-in-jre
+
+janel.min.java.version=1.8.0
+janel.debug.file=res/cnfg/log/janel.log
+
+janel.memory.max.total.percent=25
+janel.memory.init.total.percent=10
+
+# TODO: not workking ???
+# janel.memory.init.lower.limit=4096
+# janel.memory.init.upper.limit=4096
+# janel.memory.max.upper.limit=2096
+# janel.memory.max.lower.limit=2096
+
+# janel.memory.check.limits=true

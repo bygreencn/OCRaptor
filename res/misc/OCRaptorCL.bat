@@ -12,8 +12,10 @@ REM  CHECK INSTALLED JAVA-VERSION
 REM  ------------------------------------------------------------
 
 SET JV="res\bins\portable-java\win-x86-64\bin\java"
-%JV% -cp "res/bins/jre-version-checker.jar;lib/*" ^
-CommandLineInterpreter "1.8" "res/cnfg/default.resources" -gui
+
+REM TODO: update version-checker
+REM %JV% -cp "res/bins/jre-version-checker.jar;lib/*" ^
+REM CommandLineInterpreter "1.8" "res/cnfg/default.resources" -gui
 
 if errorlevel 1 (
    exit /b %errorlevel%
@@ -26,8 +28,8 @@ REM  ------------------------------------------------------------
 CLS
 SET PARAMETER=%*
 
-%JV% -Dfile.encoding=UTF-8 "-Xms128m" "-Xmx2048m" -cp ^
-"res/bins/ocraptor.jar;lib/*" "mj.Main" %PARAMETER%
+%JV% -Dfile.encoding=UTF-8 "-Xms128m" "-Xmx512m" -cp ^
+"res/bins/ocraptor.jar;lib/*" "mj.ocraptor.Main" %PARAMETER%
 
 REM  ------------------------------------------------------------
 REM  REMOVE TEMP FILES

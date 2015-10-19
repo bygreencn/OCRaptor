@@ -6,10 +6,9 @@
 
 BUILD_FROM_SOURCE=true
 CLEAN_COMPILE=true
-GENERATE_JAVACC_PARSER=false
 
 DOWNLOAD_DEPENDENCIES=true
-INSTALL_DEPENDENCIES=true
+INSTALL_DEPENDENCIES=false
 
 if ! type "mvn" &> /dev/null; then
   echo "[ERROR] 'mvn' WAS NOT FOUND ON YOUR SYSTEM"
@@ -36,6 +35,7 @@ TEMP_FOLDER="$BASEDIR""/res/misc/online-resources"
 USER_FOLDER="$BASEDIR""/res/cnfg/usr"
 LOG_FOLDER="$BASEDIR""/res/cnfg/log"
 TESS_FOLDER="$BASEDIR""/res/tess/tessdata"
+TARGET_DIR="$BASEDIR""/trg"
 
 # ---------------------------------------------------- #
 # -- TODO:
@@ -66,7 +66,6 @@ GIT_URL="https://github.com/kolbasa/"
 WGEX_GIT="wgex"
 TESS4J_NATIVES_GIT="tess4j-native-binaries"
 GHOST4J_NATIVES_GIT="ghost4j-native-libraries"
-TESS4J_WRAPPER="tess4j-wrapper"
 JRE_VER_CHECKER_GIT="jre-version-checker"
 
 # ---------------------------------------------------- #
@@ -82,14 +81,27 @@ SIGAR_API="http://repo1.maven.org/maven2/fr/inria/"\
 XPS_PARSER="http://java-axp.googlecode.com/files/"\
 "javaaxp-xps-viewer-0.2.1.linux.gtk.x86_64.zip"
 
+# ---------------------------------------------------- #
+
 TESS_LANG_OSD="https://tesseract-ocr.googlecode"\
 ".com/files/tesseract-ocr-3.01.osd.tar.gz"
-
 TESS_LANG_DEU="https://tesseract-ocr.googlecode.com"\
 "/files/tesseract-ocr-3.02.deu.tar.gz"
-
 TESS_LANG_ENG="https://tesseract-ocr.googlecode.com"\
 "/files/tesseract-ocr-3.02.eng.tar.gz"
+TESS_LANG_RUS="https://tesseract-ocr.googlecode.com"\
+"/files/tesseract-ocr-3.02.rus.tar.gz"
+TESS_LANG_ESP="https://tesseract-ocr.googlecode.com"\
+"/files/tesseract-ocr-3.02.spa.tar.gz"
+TESS_LANG_CHS="https://tesseract-ocr.googlecode.com"\
+"/files/tesseract-ocr-3.02.chi_sim.tar.gz"
+
+# ---------------------------------------------------- #
+
+function echo_seperator {
+  SEP=""; for i in {1..72};
+  do SEP=$SEP"-"; done; echo "[INFO] "$SEP
+}
 
 # ---------------------------------------------------- #
 # -- TODO:
@@ -126,14 +138,6 @@ if $DOWNLOAD_DEPENDENCIES ; then
       git clone "$GIT_URL""$GHOST4J_NATIVES_GIT" || exit 1
     fi
 
-    # download tess4j wrapper
-    if [ ! -d "$TESS4J_WRAPPER" ]; then
-      git clone "$GIT_URL""$TESS4J_WRAPPER" || exit 1
-      cd "$TESS4J_WRAPPER"
-      ./build-linux-osx-bin.sh || exit 1
-      cd "$TEMP_FOLDER"
-    fi
-
     # download java version checker
     if [ ! -d "$JRE_VER_CHECKER_GIT" ]; then
       git clone "$GIT_URL""$JRE_VER_CHECKER_GIT" || exit 1
@@ -148,35 +152,44 @@ if $DOWNLOAD_DEPENDENCIES ; then
     EXT_FOLDER="sigar"
     echo -e "\n"
     if [ ! -d "$EXT_FOLDER" ]; then
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$SIGAR_API" || exit 1
     fi
     EXT_FOLDER="tess4j"
     if [ ! -d "$EXT_FOLDER" ]; then
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$TESS4J_API" || exit 1
     fi
     EXT_FOLDER="javaaxp"
     if [ ! -d "$EXT_FOLDER" ]; then
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$XPS_PARSER" || exit 1
     fi
     EXT_FOLDER="tess4j_lang"
     if [ ! -d "$EXT_FOLDER" ]; then
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$TESS_LANG_OSD" || exit 1
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$TESS_LANG_DEU" || exit 1
-      echo -e "--------------------------------------\n"
+      echo_seperator;
       java -jar "$WGEX_BIN" "$EXT_FOLDER" \
         "$TESS_LANG_ENG" || exit 1
+      echo_seperator;
+      java -jar "$WGEX_BIN" "$EXT_FOLDER" \
+        "$TESS_LANG_RUS" || exit 1
+      echo_seperator;
+      java -jar "$WGEX_BIN" "$EXT_FOLDER" \
+        "$TESS_LANG_ESP" || exit 1
+      echo_seperator;
+      java -jar "$WGEX_BIN" "$EXT_FOLDER" \
+        "$TESS_LANG_CHS" || exit 1
     fi
-    echo -e "--------------------------------------\n"
+    echo_seperator;
 fi
 
 # ---------------------------------------------------- #
@@ -217,11 +230,10 @@ fi
 
 if $CLEAN_COMPILE; then
   mvn clean || exit 1
-fi
-
-if $GENERATE_JAVACC_PARSER ; then
-  mvn org.codehaus.mojo:javacc-maven-plugin:javacc \
-    || exit 1
+  # remove target directory
+  if [ -d "$TARGET_DIR" ]; then
+    rm -r "$TARGET_DIR"
+  fi
 fi
 
 if $BUILD_FROM_SOURCE; then
